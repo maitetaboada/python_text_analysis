@@ -1,0 +1,1029 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Installing spaCy &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'spacy_install';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fspacy_install.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/spacy_install.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Installing spaCy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-ways-of-installing-spacy">Two ways of installing spaCy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">1. Jupyter notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt">2. Command prompt</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibility-problems">Compatibility problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-instructions-on-the-spacy-site">1. Follow instructions on the spaCy site</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downgrade-numpy">2. Downgrade numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-spacy-and-language-model">Installing spaCy and language model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-spacy-and-language-model">Loading spaCy and language model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-installation">Testing installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-string-to-doc-with-spacy">Converting string to doc with spaCy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accesing-the-information-in-the-doc-object">Accesing the information in the Doc object</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="installing-spacy">
+<h1>Installing spaCy<a class="headerlink" href="#installing-spacy" title="Link to this heading">#</a></h1>
+<p>SpaCy is a set of tools for Natural Language Processing. For more info: <a class="reference external" href="https://spacy.io/">spaCy</a>.</p>
+<p>This notebook will help you install it, but you can also go to the <a class="reference external" href="https://spacy.io/usage">installation instructions</a> for the best version for your system.</p>
+<section id="two-ways-of-installing-spacy">
+<h2>Two ways of installing spaCy<a class="headerlink" href="#two-ways-of-installing-spacy" title="Link to this heading">#</a></h2>
+<section id="jupyter-notebook">
+<h3>1. Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Link to this heading">#</a></h3>
+<p>You can install it from the notebook, by running the 2 lines below in your Jupyter notebook. Remember you only have to do this once.</p>
+</section>
+<section id="command-prompt">
+<h3>2. Command prompt<a class="headerlink" href="#command-prompt" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In Windows, if you have Anaconda, you can open an Anaconda powershell prompt. If you don’t have Anaconda, just open a Windows powershell in admin mode.</p></li>
+<li><p>On a Mac, open a terminal window (spotlight and type “terminal”). Or look for “terminal” in your apps folder.</p></li>
+</ul>
+<p>Now that you have a command window open, simply go to the spaCy website and choose your operating system to copy and paste the right commands (one at a time). Click on the right options for you from here: <a class="reference external" href="https://spacy.io/usage">https://spacy.io/usage</a></p>
+</section>
+</section>
+<section id="compatibility-problems">
+<h2>Compatibility problems<a class="headerlink" href="#compatibility-problems" title="Link to this heading">#</a></h2>
+<p>If you get an error that says something about numpy, you can do two things, below.</p>
+<p>Possible error messages:</p>
+<ul class="simple">
+<li><p>numpy.ndarray …</p></li>
+<li><p>numpy.dtype …</p></li>
+</ul>
+<section id="follow-instructions-on-the-spacy-site">
+<h3>1. Follow instructions on the spaCy site<a class="headerlink" href="#follow-instructions-on-the-spacy-site" title="Link to this heading">#</a></h3>
+<p>Go to the heading “Using build constraints when compiling from source” in <a class="reference external" href="https://spacy.io/usage">https://spacy.io/usage</a>. In a command prompt/terminal, type the two lines (one at a time) that start with <code class="docutils literal notranslate"><span class="pre">PIP_CONSTRAINT</span></code>.</p>
+</section>
+<section id="downgrade-numpy">
+<h3>2. Downgrade numpy<a class="headerlink" href="#downgrade-numpy" title="Link to this heading">#</a></h3>
+<p>Type one of the two commands below, either in a notebook or in terminal/command prompt:</p>
+<ul class="simple">
+<li><p>In notebook: <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">numpy==1.26.4</span></code></p></li>
+<li><p>In command prompt: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy==1.26.4</span></code></p></li>
+</ul>
+</section>
+<section id="installing-spacy-and-language-model">
+<h3>Installing spaCy and language model<a class="headerlink" href="#installing-spacy-and-language-model" title="Link to this heading">#</a></h3>
+<p>If running this notebook locally, you’ll only have to do the next two lines once.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>spacy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: spacy in /opt/anaconda3/lib/python3.11/site-packages (3.4.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: spacy-legacy&lt;3.1.0,&gt;=3.0.10 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (3.0.12)
+Requirement already satisfied: spacy-loggers&lt;2.0.0,&gt;=1.0.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (1.0.5)
+Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (1.0.12)
+Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (2.0.11)
+Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (3.0.9)
+Requirement already satisfied: thinc&lt;8.2.0,&gt;=8.1.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (8.1.12)
+Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.9.1 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (0.10.1)
+Requirement already satisfied: srsly&lt;3.0.0,&gt;=2.4.3 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (2.5.1)
+Requirement already satisfied: catalogue&lt;2.1.0,&gt;=2.0.6 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (2.0.10)
+Requirement already satisfied: typer&lt;0.8.0,&gt;=0.3.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (0.7.0)
+Requirement already satisfied: pathy&gt;=0.3.5 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (0.11.0)
+Requirement already satisfied: smart-open&lt;7.0.0,&gt;=5.2.1 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (5.2.1)
+Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.38.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (4.65.0)
+Requirement already satisfied: numpy&gt;=1.15.0 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from spacy) (1.26.4)
+Requirement already satisfied: requests&lt;3.0.0,&gt;=2.13.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (2.31.0)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,&lt;1.11.0,&gt;=1.7.4 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (1.10.12)
+Requirement already satisfied: jinja2 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (3.1.3)
+Requirement already satisfied: setuptools in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (68.2.2)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (23.1)
+Requirement already satisfied: langcodes&lt;4.0.0,&gt;=3.2.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy) (3.5.0)
+Requirement already satisfied: language-data&gt;=1.2 in /opt/anaconda3/lib/python3.11/site-packages (from langcodes&lt;4.0.0,&gt;=3.2.0-&gt;spacy) (1.3.0)
+Requirement already satisfied: pathlib-abc==0.1.1 in /opt/anaconda3/lib/python3.11/site-packages (from pathy&gt;=0.3.5-&gt;spacy) (0.1.1)
+Requirement already satisfied: typing-extensions&gt;=4.2.0 in /opt/anaconda3/lib/python3.11/site-packages (from pydantic!=1.8,!=1.8.1,&lt;1.11.0,&gt;=1.7.4-&gt;spacy) (4.13.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy) (2.0.4)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy) (3.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy) (2024.2.2)
+Requirement already satisfied: blis&lt;0.8.0,&gt;=0.7.8 in /opt/anaconda3/lib/python3.11/site-packages (from thinc&lt;8.2.0,&gt;=8.1.0-&gt;spacy) (0.7.11)
+Requirement already satisfied: confection&lt;1.0.0,&gt;=0.0.1 in /opt/anaconda3/lib/python3.11/site-packages (from thinc&lt;8.2.0,&gt;=8.1.0-&gt;spacy) (0.1.5)
+Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /opt/anaconda3/lib/python3.11/site-packages (from typer&lt;0.8.0,&gt;=0.3.0-&gt;spacy) (8.1.7)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/anaconda3/lib/python3.11/site-packages (from jinja2-&gt;spacy) (2.1.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: marisa-trie&gt;=1.1.0 in /opt/anaconda3/lib/python3.11/site-packages (from language-data&gt;=1.2-&gt;langcodes&lt;4.0.0,&gt;=3.2.0-&gt;spacy) (1.2.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>en_core_web_sm
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting en-core-web-sm==3.4.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.4.1/en_core_web_sm-3.4.1-py3-none-any.whl (12.8 MB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/12.8 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/12.8 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/12.8 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/12.8 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/12.8 MB</span> <span class=" -Color -Color-Red">333.1 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:39</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.1/12.8 MB</span> <span class=" -Color -Color-Red">412.6 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:31</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.1/12.8 MB</span> <span class=" -Color -Color-Red">439.2 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:29</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.1/12.8 MB</span> <span class=" -Color -Color-Red">544.6 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:24</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.2/12.8 MB</span> <span class=" -Color -Color-Red">582.3 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:22</span>
+     ╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.2/12.8 MB</span> <span class=" -Color -Color-Red">671.9 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:19</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.2/12.8 MB</span> <span class=" -Color -Color-Red">693.2 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:19</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.3/12.8 MB</span> <span class=" -Color -Color-Red">741.8 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:17</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.3/12.8 MB</span> <span class=" -Color -Color-Red">781.9 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:16</span>
+     ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.4/12.8 MB</span> <span class=" -Color -Color-Red">855.6 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:15</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.4/12.8 MB</span> <span class=" -Color -Color-Red">901.6 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:14</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.5/12.8 MB</span> <span class=" -Color -Color-Red">900.5 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:14</span>
+     ━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.5/12.8 MB</span> <span class=" -Color -Color-Red">956.1 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:13</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.6/12.8 MB</span> <span class=" -Color -Color-Red">987.1 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:13</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.7/12.8 MB</span> <span class=" -Color -Color-Red">1.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:12</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.7/12.8 MB</span> <span class=" -Color -Color-Red">1.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:12</span>
+     ━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.8/12.8 MB</span> <span class=" -Color -Color-Red">1.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:11</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.9/12.8 MB</span> <span class=" -Color -Color-Red">1.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:11</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.0/12.8 MB</span> <span class=" -Color -Color-Red">1.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:10</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.1/12.8 MB</span> <span class=" -Color -Color-Red">1.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:10</span>
+     ━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.1/12.8 MB</span> <span class=" -Color -Color-Red">1.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:10</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.3/12.8 MB</span> <span class=" -Color -Color-Red">1.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:09</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.4/12.8 MB</span> <span class=" -Color -Color-Red">1.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:09</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.5/12.8 MB</span> <span class=" -Color -Color-Red">1.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:08</span>
+     ━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.6/12.8 MB</span> <span class=" -Color -Color-Red">1.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:08</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.7/12.8 MB</span> <span class=" -Color -Color-Red">1.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:07</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">1.8/12.8 MB</span> <span class=" -Color -Color-Red">1.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:07</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.0/12.8 MB</span> <span class=" -Color -Color-Red">1.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:07</span>
+     ━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.1/12.8 MB</span> <span class=" -Color -Color-Red">1.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:07</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.3/12.8 MB</span> <span class=" -Color -Color-Red">1.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:06</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.4/12.8 MB</span> <span class=" -Color -Color-Red">1.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:06</span>
+     ━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.6/12.8 MB</span> <span class=" -Color -Color-Red">2.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:06</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2.8/12.8 MB</span> <span class=" -Color -Color-Red">2.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.0/12.8 MB</span> <span class=" -Color -Color-Red">2.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.3/12.8 MB</span> <span class=" -Color -Color-Red">2.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:05</span>
+     ━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.5/12.8 MB</span> <span class=" -Color -Color-Red">2.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">3.8/12.8 MB</span> <span class=" -Color -Color-Red">2.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.0/12.8 MB</span> <span class=" -Color -Color-Red">2.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+     ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.3/12.8 MB</span> <span class=" -Color -Color-Red">2.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:04</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.7/12.8 MB</span> <span class=" -Color -Color-Red">2.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">4.9/12.8 MB</span> <span class=" -Color -Color-Red">2.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.3/12.8 MB</span> <span class=" -Color -Color-Red">3.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
+     ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">5.7/12.8 MB</span> <span class=" -Color -Color-Red">3.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:03</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.1/12.8 MB</span> <span class=" -Color -Color-Red">3.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">6.6/12.8 MB</span> <span class=" -Color -Color-Red">3.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.2/12.8 MB</span> <span class=" -Color -Color-Red">3.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.8/12.8 MB</span> <span class=" -Color -Color-Red">4.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━ <span class=" -Color -Color-Green">8.4/12.8 MB</span> <span class=" -Color -Color-Red">4.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:02</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━ <span class=" -Color -Color-Green">9.1/12.8 MB</span> <span class=" -Color -Color-Red">4.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ <span class=" -Color -Color-Green">9.3/12.8 MB</span> <span class=" -Color -Color-Red">4.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━ <span class=" -Color -Color-Green">10.0/12.8 MB</span> <span class=" -Color -Color-Red">4.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━ <span class=" -Color -Color-Green">10.7/12.8 MB</span> <span class=" -Color -Color-Red">6.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ <span class=" -Color -Color-Green">11.4/12.8 MB</span> <span class=" -Color -Color-Red">8.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ <span class=" -Color -Color-Green">12.3/12.8 MB</span> <span class=" -Color -Color-Red">10.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">12.8/12.8 MB</span> <span class=" -Color -Color-Red">11.1 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.8/12.8 MB</span> <span class=" -Color -Color-Red">10.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: spacy&lt;3.5.0,&gt;=3.4.0 in /opt/anaconda3/lib/python3.11/site-packages (from en-core-web-sm==3.4.1) (3.4.4)
+Requirement already satisfied: spacy-legacy&lt;3.1.0,&gt;=3.0.10 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (3.0.12)
+Requirement already satisfied: spacy-loggers&lt;2.0.0,&gt;=1.0.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (1.0.5)
+Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (1.0.12)
+Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2.0.11)
+Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (3.0.9)
+Requirement already satisfied: thinc&lt;8.2.0,&gt;=8.1.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (8.1.12)
+Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.9.1 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (0.10.1)
+Requirement already satisfied: srsly&lt;3.0.0,&gt;=2.4.3 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2.5.1)
+Requirement already satisfied: catalogue&lt;2.1.0,&gt;=2.0.6 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2.0.10)
+Requirement already satisfied: typer&lt;0.8.0,&gt;=0.3.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (0.7.0)
+Requirement already satisfied: pathy&gt;=0.3.5 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (0.11.0)
+Requirement already satisfied: smart-open&lt;7.0.0,&gt;=5.2.1 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (5.2.1)
+Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.38.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (4.65.0)
+Requirement already satisfied: numpy&gt;=1.15.0 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (1.26.4)
+Requirement already satisfied: requests&lt;3.0.0,&gt;=2.13.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2.31.0)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,&lt;1.11.0,&gt;=1.7.4 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (1.10.12)
+Requirement already satisfied: jinja2 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (3.1.3)
+Requirement already satisfied: setuptools in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (68.2.2)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (23.1)
+Requirement already satisfied: langcodes&lt;4.0.0,&gt;=3.2.0 in /opt/anaconda3/lib/python3.11/site-packages (from spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (3.5.0)
+Requirement already satisfied: language-data&gt;=1.2 in /opt/anaconda3/lib/python3.11/site-packages (from langcodes&lt;4.0.0,&gt;=3.2.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (1.3.0)
+Requirement already satisfied: pathlib-abc==0.1.1 in /opt/anaconda3/lib/python3.11/site-packages (from pathy&gt;=0.3.5-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (0.1.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: typing-extensions&gt;=4.2.0 in /opt/anaconda3/lib/python3.11/site-packages (from pydantic!=1.8,!=1.8.1,&lt;1.11.0,&gt;=1.7.4-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (4.13.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2.0.4)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (3.4)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2.0.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/anaconda3/lib/python3.11/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2024.2.2)
+Requirement already satisfied: blis&lt;0.8.0,&gt;=0.7.8 in /opt/anaconda3/lib/python3.11/site-packages (from thinc&lt;8.2.0,&gt;=8.1.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (0.7.11)
+Requirement already satisfied: confection&lt;1.0.0,&gt;=0.0.1 in /opt/anaconda3/lib/python3.11/site-packages (from thinc&lt;8.2.0,&gt;=8.1.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (0.1.5)
+Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /opt/anaconda3/lib/python3.11/site-packages (from typer&lt;0.8.0,&gt;=0.3.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (8.1.7)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/anaconda3/lib/python3.11/site-packages (from jinja2-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (2.1.3)
+Requirement already satisfied: marisa-trie&gt;=1.1.0 in /opt/anaconda3/lib/python3.11/site-packages (from language-data&gt;=1.2-&gt;langcodes&lt;4.0.0,&gt;=3.2.0-&gt;spacy&lt;3.5.0,&gt;=3.4.0-&gt;en-core-web-sm==3.4.1) (1.2.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: en-core-web-sm
+  Attempting uninstall: en-core-web-sm
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>    Found existing installation: en_core_web_sm 3.8.0
+    Uninstalling en_core_web_sm-3.8.0:
+      Successfully uninstalled en_core_web_sm-3.8.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed en-core-web-sm-3.4.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C2">✔ Download and installation successful</span>
+You can now load the package via spacy.load(&#39;en_core_web_sm&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="loading-spacy-and-language-model">
+<h3>Loading spaCy and language model<a class="headerlink" href="#loading-spacy-and-language-model" title="Link to this heading">#</a></h3>
+<p>Installation (if local) only needs to be done once. However, you need to import the spaCy module and load the language model every time you want to use it.</p>
+<p>Here, we are loading the small model for English derived from web data. There are other <a class="reference external" href="https://spacy.io/usage/models">models</a> for English and for other languages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">spacy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="testing-installation">
+<h3>Testing installation<a class="headerlink" href="#testing-installation" title="Link to this heading">#</a></h3>
+<p>We’ll define a sentence, process it with spaCy and check the output. This will test whether all the components are installed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;This is a test sentence about Canada, but you can type whatever you want here.&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="converting-string-to-doc-with-spacy">
+<h3>Converting string to doc with spaCy<a class="headerlink" href="#converting-string-to-doc-with-spacy" title="Link to this heading">#</a></h3>
+<p>spaCy has a special type of object, a <code class="docutils literal notranslate"><span class="pre">Doc</span></code>. It’s the entire processing pipeline for any NLP system, in a single object. It takes a text, e.g., <code class="docutils literal notranslate"><span class="pre">sent1</span></code> and applies all the NLP steps to it (tokenization, tagging, named entity recognition). Once you have converted a string (a sentence) or a whole text to Doc, you can access everything that spaCy has done with it, i.e., the entire structure of language information that it has applied to it, with labels. spaCy refers to that language information and labels as ‘linguistic annotations’. spaCy does this with a simple function, <code class="docutils literal notranslate"><span class="pre">nlp()</span></code>.</p>
+<p><img alt="spaCy pipeline" src="https://spacy.io/images/pipeline.svg" /></p>
+<p>Image from <a class="reference external" href="https://spacy.io/usage/processing-pipelines">https://spacy.io/usage/processing-pipelines</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="accesing-the-information-in-the-doc-object">
+<h3>Accesing the information in the Doc object<a class="headerlink" href="#accesing-the-information-in-the-doc-object" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">doc</span></code> contains lots of <a class="reference external" href="https://spacy.io/api/doc">useful information</a>:</p>
+<ul class="simple">
+<li><p>tokens (words)</p></li>
+<li><p>lemmas</p></li>
+<li><p>morphology</p></li>
+<li><p>part of speech tags (pos tags)</p></li>
+<li><p>syntactic structure (a parse tree)</p></li>
+<li><p>named entities</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print word tokens</span>
+
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This
+is
+a
+test
+sentence
+about
+Canada
+,
+but
+you
+can
+type
+whatever
+you
+want
+here
+.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lemmas</span>
+
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this
+be
+a
+test
+sentence
+about
+Canada
+,
+but
+you
+can
+type
+whatever
+you
+want
+here
+.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># morphology</span>
+
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">morph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This Number=Sing|PronType=Dem
+is Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin
+a Definite=Ind|PronType=Art
+test Number=Sing
+sentence Number=Sing
+about 
+Canada Number=Sing
+, PunctType=Comm
+but ConjType=Cmp
+you Case=Nom|Person=2|PronType=Prs
+can VerbForm=Fin
+type VerbForm=Inf
+whatever 
+you Case=Nom|Person=2|PronType=Prs
+want Tense=Pres|VerbForm=Fin
+here PronType=Dem
+. PunctType=Peri
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># POS tags (more on this below)</span>
+
+<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">pos_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>This PRON
+is AUX
+a DET
+test NOUN
+sentence NOUN
+about ADP
+Canada PROPN
+, PUNCT
+but CCONJ
+you PRON
+can AUX
+type VERB
+whatever PRON
+you PRON
+want VERB
+here ADV
+. PUNCT
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># named entities</span>
+
+<span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">ent</span><span class="o">.</span><span class="n">label_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Canada GPE
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-ways-of-installing-spacy">Two ways of installing spaCy</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">1. Jupyter notebook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt">2. Command prompt</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibility-problems">Compatibility problems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-instructions-on-the-spacy-site">1. Follow instructions on the spaCy site</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downgrade-numpy">2. Downgrade numpy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-spacy-and-language-model">Installing spaCy and language model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-spacy-and-language-model">Loading spaCy and language model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-installation">Testing installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-string-to-doc-with-spacy">Converting string to doc with spaCy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accesing-the-information-in-the-doc-object">Accesing the information in the Doc object</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

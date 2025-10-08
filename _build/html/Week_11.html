@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ling 380 - Week 11 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Week_11';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FWeek_11.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Week_11.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ling 380 - Week 11</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 11</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-survey-data">Processing survey data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-and-examine-the-data">Import and examine the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-one-column">Working with one column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-frequencies">Get frequencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-clouds">Word clouds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-the-frequency-dictionary">With the frequency dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entities">Named entities</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#redacting-documents">Redacting documents</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ling-380-week-11">
+<h1>Ling 380 - Week 11<a class="headerlink" href="#ling-380-week-11" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="processing-survey-data">
+<h1>Processing survey data<a class="headerlink" href="#processing-survey-data" title="Link to this heading">#</a></h1>
+<p>Survey answers are typically of the style below, with a very specific question and a <a class="reference external" href="https://en.wikipedia.org/wiki/Likert_scale">Likert scale</a> that forces the answers into clearly defined categories.</p>
+<figure>
+    <img src="./img/Likert.png" style="width:450px;"
+         alt="supervised classification">
+</figure>
+<p>This is easy to process, as the answers can be tabulated. Some surveys, however, allow free-text answers. This is the case in the type of question you get at the end of a survey, something like “Anything else you’d like to tell us?”. It’s also common in focus groups and submissions in public consultation processes. These can go from one-word answers and short sentences to long paragraphs. That’s the type of unstructured data that you need text analysis for!</p>
+<p>There are many ways we can analyze and summarize the information. we’ll focus on:</p>
+<ul class="simple">
+<li><p>Visualization with word clouds</p></li>
+<li><p>NER recognition</p></li>
+<li><p>Redaction</p></li>
+</ul>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
+<p>There are many public surveys and sources of data (see at the end for more links). Here, we will work with the <a class="reference external" href="https://odesi.ca/en/details?id=/odesi/doi__10-5683_SP3_TEKM3T.xml">Democracy Checkup</a> distributed by <a class="reference external" href="https://odesi.ca/en">Odesi</a>, a Canadian consortium that holds social science data. This is a survey of Canadian attitudes about democratic values, public policies, and current issues:</p>
+<ul class="simple">
+<li><p>Harell, Allison; Stephenson, B. Laura; Rubenson, Daniel; Loewen, Peter John, 2023, “Democracy Checkup, 2022. Canada”, <a class="reference external" href="https://doi.org/10.5683/SP3/TEKM3T">https://doi.org/10.5683/SP3/TEKM3T</a>, Borealis, V1, UNF:6:ufqbMikbXcaHqVhbaEXR3w== (fileUNF)</p></li>
+</ul>
+<p>The data contains many different variables, most of them numeric or on a scale with fixed values to choose from. But some of the values are free-form text answers; we’ll study those.</p>
+</section>
+<section id="import-statements">
+<h2>Import statements<a class="headerlink" href="#import-statements" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># run this only once, to install wordcloud</span>
+
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>wordcloud
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: wordcloud in /opt/anaconda3/lib/python3.11/site-packages (1.9.4)
+Requirement already satisfied: numpy&gt;=1.6.1 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from wordcloud) (1.26.4)
+Requirement already satisfied: pillow in /opt/anaconda3/lib/python3.11/site-packages (from wordcloud) (10.2.0)
+Requirement already satisfied: matplotlib in /opt/anaconda3/lib/python3.11/site-packages (from wordcloud) (3.8.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /opt/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;wordcloud) (1.2.0)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;wordcloud) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /opt/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;wordcloud) (4.25.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;wordcloud) (1.4.4)
+Requirement already satisfied: packaging&gt;=20.0 in /opt/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;wordcloud) (23.1)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /opt/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;wordcloud) (3.0.9)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;wordcloud) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /opt/anaconda3/lib/python3.11/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;wordcloud) (1.16.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">wordcloud</span><span class="w"> </span><span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk</span><span class="w"> </span><span class="kn">import</span> <span class="n">FreqDist</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">spacy</span>
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spacy</span><span class="w"> </span><span class="kn">import</span> <span class="n">displacy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/anaconda3/lib/python3.11/site-packages/spacy/util.py:877: UserWarning: [W095] Model &#39;en_core_web_sm&#39; (3.8.0) was trained with spaCy v3.8 and may not be 100% compatible with the current version (3.4.4). If you see errors or degraded performance, download a newer compatible model or retrain your custom model with the current spaCy version. For more details and available updates, run: python -m spacy validate
+  warnings.warn(warn_msg)
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">RegistryError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">import</span><span class="w"> </span><span class="nn">spacy</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span><span class="w"> </span><span class="nn">spacy</span><span class="w"> </span><span class="kn">import</span> <span class="n">displacy</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/__init__.py:54,</span> in <span class="ni">load</span><span class="nt">(name, vocab, disable, enable, exclude, config)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">name</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">],</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="o">*</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="n">config</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">Config</span><span class="p">]</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">SimpleFrozenDict</span><span class="p">(),</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Language</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Load a spaCy model from an installed package or a local path.</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span><span class="sd">     name (str): Package name or model path.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span><span class="sd">     RETURNS (Language): The loaded nlp object.</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">54</span>     <span class="k">return</span> <span class="n">util</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span>         <span class="n">name</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>         <span class="n">vocab</span><span class="o">=</span><span class="n">vocab</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>         <span class="n">disable</span><span class="o">=</span><span class="n">disable</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>         <span class="n">enable</span><span class="o">=</span><span class="n">enable</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>         <span class="n">exclude</span><span class="o">=</span><span class="n">exclude</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span>         <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/util.py:432,</span> in <span class="ni">load_model</span><span class="nt">(name, vocab, disable, enable, exclude, config)</span>
+<span class="g g-Whitespace">    </span><span class="mi">430</span>     <span class="k">return</span> <span class="n">get_lang_class</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;blank:&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">))()</span>
+<span class="g g-Whitespace">    </span><span class="mi">431</span> <span class="k">if</span> <span class="n">is_package</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>  <span class="c1"># installed as package</span>
+<span class="ne">--&gt; </span><span class="mi">432</span>     <span class="k">return</span> <span class="n">load_model_from_package</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+<span class="g g-Whitespace">    </span><span class="mi">433</span> <span class="k">if</span> <span class="n">Path</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>  <span class="c1"># path to model data directory</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span>     <span class="k">return</span> <span class="n">load_model_from_path</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>  <span class="c1"># type: ignore[arg-type]</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/util.py:468,</span> in <span class="ni">load_model_from_package</span><span class="nt">(name, vocab, disable, enable, exclude, config)</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Load a model from an installed package.</span>
+<span class="g g-Whitespace">    </span><span class="mi">452</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">453</span><span class="sd"> name (str): The package name.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span><span class="sd"> RETURNS (Language): The loaded nlp object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">466</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">467</span> <span class="bp">cls</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">468</span> <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">vocab</span><span class="o">=</span><span class="n">vocab</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="n">disable</span><span class="p">,</span> <span class="n">enable</span><span class="o">=</span><span class="n">enable</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="n">exclude</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/en_core_web_sm/__init__.py:10,</span> in <span class="ni">load</span><span class="nt">(**overrides)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">def</span><span class="w"> </span><span class="nf">load</span><span class="p">(</span><span class="o">**</span><span class="n">overrides</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="k">return</span> <span class="n">load_model_from_init_py</span><span class="p">(</span><span class="vm">__file__</span><span class="p">,</span> <span class="o">**</span><span class="n">overrides</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/util.py:649,</span> in <span class="ni">load_model_from_init_py</span><span class="nt">(init_file, vocab, disable, enable, exclude, config)</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">model_path</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>     <span class="k">raise</span> <span class="ne">IOError</span><span class="p">(</span><span class="n">Errors</span><span class="o">.</span><span class="n">E052</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">data_path</span><span class="p">))</span>
+<span class="ne">--&gt; </span><span class="mi">649</span> <span class="k">return</span> <span class="n">load_model_from_path</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span>     <span class="n">data_path</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>     <span class="n">vocab</span><span class="o">=</span><span class="n">vocab</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>     <span class="n">meta</span><span class="o">=</span><span class="n">meta</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span>     <span class="n">disable</span><span class="o">=</span><span class="n">disable</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>     <span class="n">enable</span><span class="o">=</span><span class="n">enable</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>     <span class="n">exclude</span><span class="o">=</span><span class="n">exclude</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">657</span> <span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/util.py:506,</span> in <span class="ni">load_model_from_path</span><span class="nt">(model_path, meta, vocab, disable, enable, exclude, config)</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span> <span class="n">overrides</span> <span class="o">=</span> <span class="n">dict_to_dot</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span> <span class="n">config</span> <span class="o">=</span> <span class="n">load_config</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span> <span class="n">overrides</span><span class="o">=</span><span class="n">overrides</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">506</span> <span class="n">nlp</span> <span class="o">=</span> <span class="n">load_model_from_config</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">507</span>     <span class="n">config</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">508</span>     <span class="n">vocab</span><span class="o">=</span><span class="n">vocab</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">509</span>     <span class="n">disable</span><span class="o">=</span><span class="n">disable</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">510</span>     <span class="n">enable</span><span class="o">=</span><span class="n">enable</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">511</span>     <span class="n">exclude</span><span class="o">=</span><span class="n">exclude</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">512</span>     <span class="n">meta</span><span class="o">=</span><span class="n">meta</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">513</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span> <span class="k">return</span> <span class="n">nlp</span><span class="o">.</span><span class="n">from_disk</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="n">exclude</span><span class="p">,</span> <span class="n">overrides</span><span class="o">=</span><span class="n">overrides</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/util.py:554,</span> in <span class="ni">load_model_from_config</span><span class="nt">(config, meta, vocab, disable, enable, exclude, auto_fill, validate)</span>
+<span class="g g-Whitespace">    </span><span class="mi">551</span> <span class="c1"># This will automatically handle all codes registered via the languages</span>
+<span class="g g-Whitespace">    </span><span class="mi">552</span> <span class="c1"># registry, including custom subclasses provided via entry points</span>
+<span class="g g-Whitespace">    </span><span class="mi">553</span> <span class="n">lang_cls</span> <span class="o">=</span> <span class="n">get_lang_class</span><span class="p">(</span><span class="n">nlp_config</span><span class="p">[</span><span class="s2">&quot;lang&quot;</span><span class="p">])</span>
+<span class="ne">--&gt; </span><span class="mi">554</span> <span class="n">nlp</span> <span class="o">=</span> <span class="n">lang_cls</span><span class="o">.</span><span class="n">from_config</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">555</span>     <span class="n">config</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">556</span>     <span class="n">vocab</span><span class="o">=</span><span class="n">vocab</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">557</span>     <span class="n">disable</span><span class="o">=</span><span class="n">disable</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">558</span>     <span class="n">enable</span><span class="o">=</span><span class="n">enable</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">559</span>     <span class="n">exclude</span><span class="o">=</span><span class="n">exclude</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">560</span>     <span class="n">auto_fill</span><span class="o">=</span><span class="n">auto_fill</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">561</span>     <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span>     <span class="n">meta</span><span class="o">=</span><span class="n">meta</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">563</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="k">return</span> <span class="n">nlp</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/language.py:1764,</span> in <span class="ni">Language.from_config</span><span class="nt">(cls, config, vocab, disable, enable, exclude, meta, auto_fill, validate)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1762</span>     <span class="n">filled</span><span class="p">[</span><span class="s2">&quot;pretraining&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orig_pretraining</span>
+<span class="g g-Whitespace">   </span><span class="mi">1763</span>     <span class="n">config</span><span class="p">[</span><span class="s2">&quot;pretraining&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">orig_pretraining</span>
+<span class="ne">-&gt; </span><span class="mi">1764</span> <span class="n">resolved_nlp</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">resolve</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1765</span>     <span class="n">filled</span><span class="p">[</span><span class="s2">&quot;nlp&quot;</span><span class="p">],</span> <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">ConfigSchemaNlp</span>
+<span class="g g-Whitespace">   </span><span class="mi">1766</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1767</span> <span class="n">create_tokenizer</span> <span class="o">=</span> <span class="n">resolved_nlp</span><span class="p">[</span><span class="s2">&quot;tokenizer&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1768</span> <span class="n">before_creation</span> <span class="o">=</span> <span class="n">resolved_nlp</span><span class="p">[</span><span class="s2">&quot;before_creation&quot;</span><span class="p">]</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/confection/__init__.py:760,</span> in <span class="ni">registry.resolve</span><span class="nt">(cls, config, schema, overrides, validate)</span>
+<span class="g g-Whitespace">    </span><span class="mi">751</span> <span class="nd">@classmethod</span>
+<span class="g g-Whitespace">    </span><span class="mi">752</span> <span class="k">def</span><span class="w"> </span><span class="nf">resolve</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">753</span>     <span class="bp">cls</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">758</span>     <span class="n">validate</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">759</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="ne">--&gt; </span><span class="mi">760</span>     <span class="n">resolved</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_make</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">761</span>         <span class="n">config</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="n">overrides</span><span class="o">=</span><span class="n">overrides</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span> <span class="n">resolve</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">762</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">763</span>     <span class="k">return</span> <span class="n">resolved</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/confection/__init__.py:809,</span> in <span class="ni">registry._make</span><span class="nt">(cls, config, schema, overrides, resolve, validate)</span>
+<span class="g g-Whitespace">    </span><span class="mi">807</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">is_interpolated</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">808</span>     <span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">(</span><span class="n">orig_config</span><span class="p">)</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+<span class="ne">--&gt; </span><span class="mi">809</span> <span class="n">filled</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">resolved</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_fill</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">810</span>     <span class="n">config</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="n">validate</span><span class="o">=</span><span class="n">validate</span><span class="p">,</span> <span class="n">overrides</span><span class="o">=</span><span class="n">overrides</span><span class="p">,</span> <span class="n">resolve</span><span class="o">=</span><span class="n">resolve</span>
+<span class="g g-Whitespace">    </span><span class="mi">811</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">812</span> <span class="n">filled</span> <span class="o">=</span> <span class="n">Config</span><span class="p">(</span><span class="n">filled</span><span class="p">,</span> <span class="n">section_order</span><span class="o">=</span><span class="n">section_order</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">813</span> <span class="c1"># Check that overrides didn&#39;t include invalid properties not in config</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/confection/__init__.py:863,</span> in <span class="ni">registry._fill</span><span class="nt">(cls, config, schema, validate, resolve, parent, overrides)</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>     <span class="n">field</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">__fields__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>     <span class="n">schema</span><span class="o">.</span><span class="n">__fields__</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">copy_model_field</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">Any</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">863</span> <span class="n">promise_schema</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">make_promise_schema</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">resolve</span><span class="o">=</span><span class="n">resolve</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span> <span class="n">filled</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">validation</span><span class="p">[</span><span class="n">v_key</span><span class="p">],</span> <span class="n">final</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_fill</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>     <span class="n">value</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="n">promise_schema</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="n">overrides</span><span class="o">=</span><span class="n">overrides</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">871</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">872</span> <span class="n">reg_name</span><span class="p">,</span> <span class="n">func_name</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get_constructor</span><span class="p">(</span><span class="n">final</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/confection/__init__.py:1069,</span> in <span class="ni">registry.make_promise_schema</span><span class="nt">(cls, obj, resolve)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1067</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">resolve</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">cls</span><span class="o">.</span><span class="n">has</span><span class="p">(</span><span class="n">reg_name</span><span class="p">,</span> <span class="n">func_name</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1068</span>     <span class="k">return</span> <span class="n">EmptySchema</span>
+<span class="ne">-&gt; </span><span class="mi">1069</span> <span class="n">func</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">reg_name</span><span class="p">,</span> <span class="n">func_name</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1070</span> <span class="c1"># Read the argument annotations and defaults from the function signature</span>
+<span class="g g-Whitespace">   </span><span class="mi">1071</span> <span class="n">id_keys</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">obj</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;@&quot;</span><span class="p">)]</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/spacy/util.py:127,</span> in <span class="ni">registry.get</span><span class="nt">(cls, registry_name, func_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">125</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">registry_name</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span>     <span class="n">names</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">get_registry_names</span><span class="p">())</span> <span class="ow">or</span> <span class="s2">&quot;none&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">127</span>     <span class="k">raise</span> <span class="n">RegistryError</span><span class="p">(</span><span class="n">Errors</span><span class="o">.</span><span class="n">E892</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">registry_name</span><span class="p">,</span> <span class="n">available</span><span class="o">=</span><span class="n">names</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span> <span class="n">reg</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">registry_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span> <span class="k">try</span><span class="p">:</span>
+
+<span class="ne">RegistryError</span>: [E892] Unknown function registry: &#39;vectors&#39;.
+
+<span class="n">Available</span> <span class="n">names</span><span class="p">:</span> <span class="n">architectures</span><span class="p">,</span> <span class="n">augmenters</span><span class="p">,</span> <span class="n">batchers</span><span class="p">,</span> <span class="n">callbacks</span><span class="p">,</span> <span class="n">cli</span><span class="p">,</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">displacy_colors</span><span class="p">,</span> <span class="n">factories</span><span class="p">,</span> <span class="n">initializers</span><span class="p">,</span> <span class="n">languages</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">lemmatizers</span><span class="p">,</span> <span class="n">loggers</span><span class="p">,</span> <span class="n">lookups</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">misc</span><span class="p">,</span> <span class="n">models</span><span class="p">,</span> <span class="n">ops</span><span class="p">,</span> <span class="n">optimizers</span><span class="p">,</span> <span class="n">readers</span><span class="p">,</span> <span class="n">schedules</span><span class="p">,</span> <span class="n">scorers</span><span class="p">,</span> <span class="n">tokenizers</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-and-examine-the-data">
+<h2>Import and examine the data<a class="headerlink" href="#import-and-examine-the-data" title="Link to this heading">#</a></h2>
+<p>The data is huge: 9,829 rows (answers) and 501 questions (columns). As you can see from the output of <code class="docutils literal notranslate"><span class="pre">df.head()</span></code>, most of the data is numerical, so we’ll work only with text columns. Luckily, those columns always end with the string “TEXT”, so we can use pandas to extract them. For instance:</p>
+<ul class="simple">
+<li><p>dc22_vote_choice_6_TEXT – what party the person intends to vote for (in Dec 2022)</p></li>
+<li><p>dc22_soc_media_use_9_TEXT – what social media the person uses</p></li>
+<li><p>dc22_language_3_TEXT – what language the person speaks</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>You can use the <a class="reference external" href="https://borealisdata.ca/data-explorer/?siteUrl=https:%2F%2Fborealisdata.ca&amp;amp;dvLocale=en&amp;amp;fileId=659110">Data explorer</a> for this dataset to check the actual questions for each of these columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/cora-cdem-2022_F1.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check which columns contain the word &quot;TEXT&quot; using a regular expression</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;TEXT&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a new dataframe, &#39;df_text&#39; that contains only those columns</span>
+
+<span class="n">df_text</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="s1">&#39;TEXT&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_text</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="working-with-one-column">
+<h2>Working with one column<a class="headerlink" href="#working-with-one-column" title="Link to this heading">#</a></h2>
+<p>We will work with one of the columns, ‘dc22_vote_choice_6_TEXT’, where the question was: “If a federal election were held today, which party would you be most likely to vote for?”</p>
+<p>We will first extract data from that column to a pandas series. When extracting, we will drop any empty values (NaN) with <code class="docutils literal notranslate"><span class="pre">dropna()</span></code> and the columns that contain ‘-99’, which means the person did not answer this question.</p>
+<p>Then, we put that into a string variable and lowercase it (so that “People’s Party” and “People’s party” are considered the same). But then we realize actually that the word “party” occurs here a lot, so we’ll simply remove it with the stopwords.</p>
+<p>Finally, we have a somewhat clean string of words that we can send to WordCloud to visualize.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># most of the values are &#39;-99&#39; (unanswered)</span>
+<span class="c1"># but you can sort other values to find the most frequent in a column</span>
+
+<span class="n">df_text</span><span class="p">[</span><span class="s1">&#39;dc22_vote_choice_6_TEXT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[:</span><span class="mi">20</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice</span> <span class="o">=</span> <span class="n">df_text</span><span class="p">[</span><span class="s1">&#39;dc22_vote_choice_6_TEXT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_text</span><span class="p">[</span><span class="s1">&#39;dc22_vote_choice_6_TEXT&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;99&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is a pandas series, so we&#39;ll convert it to a string</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">vote_choice</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_str</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">vote_choice</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_str</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check the contents of stop_words</span>
+
+<span class="n">stop_words</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># append the word &quot;party&quot;</span>
+
+<span class="n">stop_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;party&#39;</span><span class="p">)</span>
+<span class="n">stop_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Canada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a function that: 1. tokenizes, 2. lowercases and</span>
+<span class="c1"># 3. removes stopwords</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">cleaned_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_clean</span> <span class="o">=</span> <span class="n">clean_text</span><span class="p">(</span><span class="n">vote_choice_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_clean</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="get-frequencies">
+<h2>Get frequencies<a class="headerlink" href="#get-frequencies" title="Link to this heading">#</a></h2>
+<p>You’ll see below that WordCloud randomizes the font size of the output. But sometimes we want that to be meaningful, reflecting how frequent the word is. To get that information, we will use NLTK’s FreqDist and generate a dictionary when we clean the text.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a function that: 1. tokenizes, 2. lowercases,</span>
+<span class="c1"># 3. removes stopwords and 4. counts the words</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_text_freq</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">cleaned_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+    <span class="n">freq_dist</span> <span class="o">=</span> <span class="n">FreqDist</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">freq_dist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_dict</span> <span class="o">=</span> <span class="n">clean_text_freq</span><span class="p">(</span><span class="n">vote_choice_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_dict</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="word-clouds">
+<h2>Word clouds<a class="headerlink" href="#word-clouds" title="Link to this heading">#</a></h2>
+<p>Word clouds are popular and can look very cool in a report. They can also be misleading if the size of the font does not correspond to the frequency of the word in the data, so you should use them with caution.</p>
+<p>We’ll use the <a class="reference external" href="https://github.com/amueller/word_cloud/">Wordcloud</a> library, which we imported above. There are many options for how to do this. Here are two possibilities, changing the shape and the background colour. Check out the <a class="reference external" href="https://amueller.github.io/word_cloud/auto_examples/index.html#example-gallery">example gallery</a> for more.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># options</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ogrid</span><span class="p">[:</span><span class="mi">300</span><span class="p">,</span> <span class="p">:</span><span class="mi">300</span><span class="p">]</span>
+
+<span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">150</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="mi">150</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">&gt;</span> <span class="mi">130</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="mi">255</span> <span class="o">*</span> <span class="n">mask</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># this actually generates the word cloud</span>
+<span class="n">wc</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">background_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">)</span>
+<span class="n">wc</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">vote_choice_clean</span><span class="p">)</span>
+
+<span class="c1"># and this displays it</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wc</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">()</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">vote_choice_clean</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span><span class="c1">#</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#bigger</span>
+<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">()</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">vote_choice_clean</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="with-the-frequency-dictionary">
+<h2>With the frequency dictionary<a class="headerlink" href="#with-the-frequency-dictionary" title="Link to this heading">#</a></h2>
+<p>Recall that above we created a dictionary of the frequency of each word. We can use it to display relative to frequency.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">()</span><span class="o">.</span><span class="n">generate_from_frequencies</span><span class="p">(</span><span class="n">vote_choice_dict</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="named-entities">
+<h1>Named entities<a class="headerlink" href="#named-entities" title="Link to this heading">#</a></h1>
+<p>Another thing you may want to do with survey results is extract the named entities mentioned in the text. Remember that we can do this with spaCy (see Week6).</p>
+<p>We will use the variable <code class="docutils literal notranslate"><span class="pre">vote_choice_str</span></code> from earlier, which is simply the running text of the column about vote choice. We process it with spaCy (which was imported at the top) and we can print the entities that are of type ‘ORG’, which should correspond to a political party.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">vote_choice_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_str</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print all entities and their label</span>
+<span class="c1"># note that there are errors here</span>
+
+<span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">vote_choice_doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">ent</span><span class="o">.</span><span class="n">label_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print the ORG entities</span>
+
+<span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">vote_choice_doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">ent</span><span class="o">.</span><span class="n">label_</span> <span class="o">==</span> <span class="s2">&quot;ORG&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="redacting-documents">
+<h1>Redacting documents<a class="headerlink" href="#redacting-documents" title="Link to this heading">#</a></h1>
+<p>This idea comes from an <a class="reference external" href="https://github.com/Jcharis/Natural-Language-Processing-Tutorials/blob/master/NLP_with_SpaCy/Automatic%20Redaction%20%20%26%20Sanitization%20of%20Document%20Using%20Spacy%20NER.ipynb">NLP notebook on redacting names</a>. Once you have named entities identified (hopefully accurately), you can also use the NER output to redact any personal information. For instance, you can identify all the person’s names and remove them or replace them with something like ‘REDACTED’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sanitize_names</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">redacted_sentences</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">token</span><span class="o">.</span><span class="n">ent_type_</span> <span class="o">==</span> <span class="s1">&#39;PERSON&#39;</span><span class="p">:</span>
+            <span class="n">redacted_sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;[REDACTED]&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">redacted_sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">redacted_sentences</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_redacted</span> <span class="o">=</span> <span class="n">sanitize_names</span><span class="p">(</span><span class="n">vote_choice_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vote_choice_redacted</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<p>We have learned about processing and aggregating survey data. This notebook has used some concepts we have learned previously:</p>
+<ul class="simple">
+<li><p>Tokenization</p></li>
+<li><p>Lowercasing</p></li>
+<li><p>Removing stopwords</p></li>
+<li><p>Creating a function to clean text</p></li>
+<li><p>Reading in and manipulating data in pandas</p></li>
+</ul>
+<p>New information:</p>
+<ul class="simple">
+<li><p>Creating word clouds</p></li>
+<li><p>Using NER (named entity recognition) to redact documents</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 11</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#processing-survey-data">Processing survey data</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-and-examine-the-data">Import and examine the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-one-column">Working with one column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-frequencies">Get frequencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#word-clouds">Word clouds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-the-frequency-dictionary">With the frequency dictionary</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#named-entities">Named entities</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#redacting-documents">Redacting documents</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

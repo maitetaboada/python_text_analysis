@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ling 380 - Week 9 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Week_09';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FWeek_09.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Week_09.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ling 380 - Week 9</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 9</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">Sentiment analysis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis-with-vader">Sentiment analysis with VADER</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-with-toy-sentences">Try with toy sentences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#movie-reviews">Movie reviews</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ling-380-week-9">
+<h1>Ling 380 - Week 9<a class="headerlink" href="#ling-380-week-9" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sentiment-analysis">
+<h1>Sentiment analysis<a class="headerlink" href="#sentiment-analysis" title="Link to this heading">#</a></h1>
+<p>Sentiment analysis is a computational method to extract ‘sentiment’ from text. What ‘sentiment’ means varies, but in general, it is the positive or negative opinion about something that is conveyed in the text.</p>
+<p>The most basic methods have a dictionary of positive and negative words and then check to see how many of those are in the text in question. You can do fancy calculations, but a difference or relative proportion is common.</p>
+<p>Sentiment analysis is used widely, from online posts and reviews to survey data and news. There are many issues with using it without fully understanding what the numbers mean. Do check the reading on Canvas to explore more about it:</p>
+<ul class="simple">
+<li><p>Taboada, M. (2016) <a class="reference external" href="https://www.annualreviews.org/content/journals/10.1146/annurev-linguistics-011415-040518">Sentiment analysis: An overview from linguistics</a>. <em>Annual Review of Linguistics</em> 2: 325-347.</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sentiment-analysis-with-vader">
+<h1>Sentiment analysis with VADER<a class="headerlink" href="#sentiment-analysis-with-vader" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://github.com/cjhutto/vaderSentiment">VADER</a> is a lexicon-based system for sentiment analysis. It takes a text (or post, headline, etc.) and provides two scores:</p>
+<ul class="simple">
+<li><p>Proportion of the text with positive, negative, or neutral words</p>
+<ul>
+<li><p>This just counts the words in the text that are also in the <a class="reference external" href="https://github.com/cjhutto/vaderSentiment/blob/master/vaderSentiment/vader_lexicon.txt">dictionary</a> and calculates the ratio</p></li>
+</ul>
+</li>
+<li><p>Composite score</p>
+<ul>
+<li><p>Calculated using the <a class="reference external" href="https://github.com/cjhutto/vaderSentiment/blob/master/vaderSentiment/vader_lexicon.txt">dictionary</a>, plus applying a set of rules to deal with negation and other linguistic phenomena that may change the score</p></li>
+</ul>
+</li>
+</ul>
+<p>There is an implementation of VADER in NLTK, so we will use that version.</p>
+<section id="import-statements">
+<h2>Import statements<a class="headerlink" href="#import-statements" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.sentiment.vader</span><span class="w"> </span><span class="kn">import</span> <span class="n">SentimentIntensityAnalyzer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create an instance of the analyzer</span>
+<span class="n">analyzer</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="try-with-toy-sentences">
+<h2>Try with toy sentences<a class="headerlink" href="#try-with-toy-sentences" title="Link to this heading">#</a></h2>
+<p>A couple of toy sentences and a list of examples from the VADER repository.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sent1</span> <span class="o">=</span> <span class="s2">&quot;I really like you.&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sent1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.417, &#39;pos&#39;: 0.583, &#39;compound&#39;: 0.4201}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sent2</span> <span class="o">=</span> <span class="s2">&quot;I really really really very much like you.&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sent2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.664, &#39;pos&#39;: 0.336, &#39;compound&#39;: 0.4664}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sent3</span> <span class="o">=</span> <span class="s2">&quot;I had a horrible, terrible, no good day&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sent3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;neg&#39;: 0.642, &#39;neu&#39;: 0.146, &#39;pos&#39;: 0.212, &#39;compound&#39;: -0.7096}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sent3</span> <span class="o">=</span> <span class="s2">&quot;I haven&#39;t read a better book&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sent3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;neg&#39;: 0.445, &#39;neu&#39;: 0.555, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.3412}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># these are sample sentences from VADER</span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;VADER is smart, handsome, and funny.&quot;</span><span class="p">,</span>  <span class="c1"># positive sentence example</span>
+             <span class="s2">&quot;VADER is smart, handsome, and funny!&quot;</span><span class="p">,</span>  <span class="c1"># punctuation emphasis handled correctly (sentiment intensity adjusted)</span>
+             <span class="s2">&quot;VADER is very smart, handsome, and funny.&quot;</span><span class="p">,</span> <span class="c1"># booster words handled correctly (sentiment intensity adjusted)</span>
+             <span class="s2">&quot;VADER is VERY SMART, handsome, and FUNNY.&quot;</span><span class="p">,</span>  <span class="c1"># emphasis for ALLCAPS handled</span>
+             <span class="s2">&quot;VADER is VERY SMART, handsome, and FUNNY!!!&quot;</span><span class="p">,</span> <span class="c1"># combination of signals - VADER appropriately adjusts intensity</span>
+             <span class="s2">&quot;VADER is VERY SMART, uber handsome, and FRIGGIN FUNNY!!!&quot;</span><span class="p">,</span> <span class="c1"># booster words &amp; punctuation make this close to ceiling for score</span>
+             <span class="s2">&quot;VADER is not smart, handsome, nor funny.&quot;</span><span class="p">,</span>  <span class="c1"># negation sentence example</span>
+             <span class="s2">&quot;The book was good.&quot;</span><span class="p">,</span>  <span class="c1"># positive sentence</span>
+             <span class="s2">&quot;At least it isn&#39;t a horrible book.&quot;</span><span class="p">,</span>  <span class="c1"># negated negative sentence with contraction</span>
+             <span class="s2">&quot;The book was only kind of good.&quot;</span><span class="p">,</span> <span class="c1"># qualified positive sentence is handled correctly (intensity adjusted)</span>
+             <span class="s2">&quot;The plot was good, but the characters are uncompelling and the dialog is not great.&quot;</span><span class="p">,</span> <span class="c1"># mixed negation sentence</span>
+             <span class="s2">&quot;Today SUX!&quot;</span><span class="p">,</span>  <span class="c1"># negative slang with capitalization emphasis</span>
+             <span class="s2">&quot;Today only kinda sux! But I&#39;ll get by, lol&quot;</span><span class="p">,</span> <span class="c1"># mixed sentiment example with slang and constrastive conjunction &quot;but&quot;</span>
+             <span class="s2">&quot;Make sure you :) or :D today!&quot;</span><span class="p">,</span>  <span class="c1"># emoticons handled</span>
+             <span class="s2">&quot;Catch utf-8 emoji such as such as 💘 and 💋 and 😁&quot;</span><span class="p">,</span>  <span class="c1"># emojis handled</span>
+             <span class="s2">&quot;Not bad at all&quot;</span>  <span class="c1"># Capitalized negation</span>
+             <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+    <span class="n">vs</span> <span class="o">=</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:-&lt;60}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">vs</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>VADER is smart, handsome, and funny.------------------------ {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.254, &#39;pos&#39;: 0.746, &#39;compound&#39;: 0.8316}
+VADER is smart, handsome, and funny!------------------------ {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.248, &#39;pos&#39;: 0.752, &#39;compound&#39;: 0.8439}
+VADER is very smart, handsome, and funny.------------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.299, &#39;pos&#39;: 0.701, &#39;compound&#39;: 0.8545}
+VADER is VERY SMART, handsome, and FUNNY.------------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.246, &#39;pos&#39;: 0.754, &#39;compound&#39;: 0.9227}
+VADER is VERY SMART, handsome, and FUNNY!!!----------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.233, &#39;pos&#39;: 0.767, &#39;compound&#39;: 0.9342}
+VADER is VERY SMART, uber handsome, and FRIGGIN FUNNY!!!---- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.294, &#39;pos&#39;: 0.706, &#39;compound&#39;: 0.9469}
+VADER is not smart, handsome, nor funny.-------------------- {&#39;neg&#39;: 0.646, &#39;neu&#39;: 0.354, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.7424}
+The book was good.------------------------------------------ {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.508, &#39;pos&#39;: 0.492, &#39;compound&#39;: 0.4404}
+At least it isn&#39;t a horrible book.-------------------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.637, &#39;pos&#39;: 0.363, &#39;compound&#39;: 0.431}
+The book was only kind of good.----------------------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.697, &#39;pos&#39;: 0.303, &#39;compound&#39;: 0.3832}
+The plot was good, but the characters are uncompelling and the dialog is not great. {&#39;neg&#39;: 0.327, &#39;neu&#39;: 0.579, &#39;pos&#39;: 0.094, &#39;compound&#39;: -0.7042}
+Today SUX!-------------------------------------------------- {&#39;neg&#39;: 0.779, &#39;neu&#39;: 0.221, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.5461}
+Today only kinda sux! But I&#39;ll get by, lol------------------ {&#39;neg&#39;: 0.127, &#39;neu&#39;: 0.556, &#39;pos&#39;: 0.317, &#39;compound&#39;: 0.5249}
+Make sure you :) or :D today!------------------------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.294, &#39;pos&#39;: 0.706, &#39;compound&#39;: 0.8633}
+Catch utf-8 emoji such as such as 💘 and 💋 and 😁------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 1.0, &#39;pos&#39;: 0.0, &#39;compound&#39;: 0.0}
+Not bad at all---------------------------------------------- {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.513, &#39;pos&#39;: 0.487, &#39;compound&#39;: 0.431}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># another way to print</span>
+<span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">:</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   &quot;</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>VADER is smart, handsome, and funny.
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.254, &#39;pos&#39;: 0.746, &#39;compound&#39;: 0.8316}
+VADER is smart, handsome, and funny!
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.248, &#39;pos&#39;: 0.752, &#39;compound&#39;: 0.8439}
+VADER is very smart, handsome, and funny.
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.299, &#39;pos&#39;: 0.701, &#39;compound&#39;: 0.8545}
+VADER is VERY SMART, handsome, and FUNNY.
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.246, &#39;pos&#39;: 0.754, &#39;compound&#39;: 0.9227}
+VADER is VERY SMART, handsome, and FUNNY!!!
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.233, &#39;pos&#39;: 0.767, &#39;compound&#39;: 0.9342}
+VADER is VERY SMART, uber handsome, and FRIGGIN FUNNY!!!
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.294, &#39;pos&#39;: 0.706, &#39;compound&#39;: 0.9469}
+VADER is not smart, handsome, nor funny.
+    {&#39;neg&#39;: 0.646, &#39;neu&#39;: 0.354, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.7424}
+The book was good.
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.508, &#39;pos&#39;: 0.492, &#39;compound&#39;: 0.4404}
+At least it isn&#39;t a horrible book.
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.637, &#39;pos&#39;: 0.363, &#39;compound&#39;: 0.431}
+The book was only kind of good.
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.697, &#39;pos&#39;: 0.303, &#39;compound&#39;: 0.3832}
+The plot was good, but the characters are uncompelling and the dialog is not great.
+    {&#39;neg&#39;: 0.327, &#39;neu&#39;: 0.579, &#39;pos&#39;: 0.094, &#39;compound&#39;: -0.7042}
+Today SUX!
+    {&#39;neg&#39;: 0.779, &#39;neu&#39;: 0.221, &#39;pos&#39;: 0.0, &#39;compound&#39;: -0.5461}
+Today only kinda sux! But I&#39;ll get by, lol
+    {&#39;neg&#39;: 0.127, &#39;neu&#39;: 0.556, &#39;pos&#39;: 0.317, &#39;compound&#39;: 0.5249}
+Make sure you :) or :D today!
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.294, &#39;pos&#39;: 0.706, &#39;compound&#39;: 0.8633}
+Catch utf-8 emoji such as such as 💘 and 💋 and 😁
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 1.0, &#39;pos&#39;: 0.0, &#39;compound&#39;: 0.0}
+Not bad at all
+    {&#39;neg&#39;: 0.0, &#39;neu&#39;: 0.513, &#39;pos&#39;: 0.487, &#39;compound&#39;: 0.431}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="movie-reviews">
+<h2>Movie reviews<a class="headerlink" href="#movie-reviews" title="Link to this heading">#</a></h2>
+<p>Next, we will analyze some movie reviews from the <a class="reference external" href="https://www.sfu.ca/~mtaboada/SFU_Review_Corpus.html">SFU Review Corpus</a>. They are in the ‘reviews’ directory.</p>
+<p>We will just do the usual process of defining a function to calculate the score and another function to process the directory and call the calculating function. Note that I am creating the analyzer here again. This is because you want to be able to run this function by itself, without the statement above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_sentiment_scores</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Uses VADER within NLTK to calculate sentiment</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): a string containing the file or text</span>
+<span class="sd">        </span>
+<span class="sd">    Returns: </span>
+<span class="sd">        dict: a dictionary that VADER creates</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">analyzer</span> <span class="o">=</span> <span class="n">SentimentIntensityAnalyzer</span><span class="p">()</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">analyzer</span><span class="o">.</span><span class="n">polarity_scores</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">score</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">process_dir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads all the files in a directory. Processes them using the &#39;get_sentiment_scores&#39; function</span>
+<span class="sd">    </span>
+<span class="sd">    Args: </span>
+<span class="sd">        path (str): path to the directory where the files are</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: a dictionary with file names as keys and the tokens, types, lexical diversity, as values</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.txt&quot;</span><span class="p">):</span>    
+            <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>      
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="n">scores</span><span class="p">[</span><span class="n">filename</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_sentiment_scores</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">scores</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;./reviews&#39;</span>
+
+<span class="n">scores_files</span> <span class="o">=</span> <span class="n">process_dir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">scores_files</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;gothika.txt&#39;: {&#39;neg&#39;: 0.179, &#39;neu&#39;: 0.722, &#39;pos&#39;: 0.099, &#39;compound&#39;: -0.9938}, &#39;bad_santa.txt&#39;: {&#39;neg&#39;: 0.135, &#39;neu&#39;: 0.693, &#39;pos&#39;: 0.172, &#39;compound&#39;: 0.9489}, &#39;cat_in_the_hat.txt&#39;: {&#39;neg&#39;: 0.072, &#39;neu&#39;: 0.795, &#39;pos&#39;: 0.133, &#39;compound&#39;: 0.9882}, &#39;elf.txt&#39;: {&#39;neg&#39;: 0.046, &#39;neu&#39;: 0.821, &#39;pos&#39;: 0.133, &#39;compound&#39;: 0.9868}}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># of course, pandas makes everything look better</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">scores_files</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>neg</th>
+      <th>neu</th>
+      <th>pos</th>
+      <th>compound</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>gothika.txt</th>
+      <td>0.179</td>
+      <td>0.722</td>
+      <td>0.099</td>
+      <td>-0.9938</td>
+    </tr>
+    <tr>
+      <th>bad_santa.txt</th>
+      <td>0.135</td>
+      <td>0.693</td>
+      <td>0.172</td>
+      <td>0.9489</td>
+    </tr>
+    <tr>
+      <th>cat_in_the_hat.txt</th>
+      <td>0.072</td>
+      <td>0.795</td>
+      <td>0.133</td>
+      <td>0.9882</td>
+    </tr>
+    <tr>
+      <th>elf.txt</th>
+      <td>0.046</td>
+      <td>0.821</td>
+      <td>0.133</td>
+      <td>0.9868</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<p>We have learned about sentiment analysis and how to run a ‘classic’ method for sentiment, VADER.</p>
+<p>Read the files and compare the scores to the text in the files. Do you agree with what VADER says? Why or why not?</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 9</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis">Sentiment analysis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sentiment-analysis-with-vader">Sentiment analysis with VADER</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements">Import statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#try-with-toy-sentences">Try with toy sentences</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#movie-reviews">Movie reviews</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

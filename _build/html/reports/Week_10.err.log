@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Create dictionary of strings by author from all text files in the directory
+strings_by_author = {}
+for filename in os.listdir(path):
+    if filename.endswith('.txt'):  # Make sure it's a .txt file
+        author_name = os.path.splitext(filename)[0]  # Use filename as the author name
+        strings_by_author[author_name] = text_to_string(os.path.join(path, filename))
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mUnicodeDecodeError[0m                        Traceback (most recent call last)
+Cell [0;32mIn[4], line 6[0m
+[1;32m      4[0m [38;5;28;01mif[39;00m filename[38;5;241m.[39mendswith([38;5;124m'[39m[38;5;124m.txt[39m[38;5;124m'[39m):  [38;5;66;03m# Make sure it's a .txt file[39;00m
+[1;32m      5[0m     author_name [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39msplitext(filename)[[38;5;241m0[39m]  [38;5;66;03m# Use filename as the author name[39;00m
+[0;32m----> 6[0m     strings_by_author[author_name] [38;5;241m=[39m text_to_string(os[38;5;241m.[39mpath[38;5;241m.[39mjoin(path, filename))
+
+Cell [0;32mIn[2], line 4[0m, in [0;36mtext_to_string[0;34m(filename)[0m
+[1;32m      2[0m [38;5;250m[39m[38;5;124;03m"""Read a text file and return a string."""[39;00m
+[1;32m      3[0m [38;5;28;01mwith[39;00m [38;5;28mopen[39m(filename) [38;5;28;01mas[39;00m infile:
+[0;32m----> 4[0m     [38;5;28;01mreturn[39;00m infile[38;5;241m.[39mread()
+
+File [0;32m<frozen codecs>:322[0m, in [0;36mdecode[0;34m(self, input, final)[0m
+
+[0;31mUnicodeDecodeError[0m: 'utf-8' codec can't decode byte 0x91 in position 6: invalid start byte
+
