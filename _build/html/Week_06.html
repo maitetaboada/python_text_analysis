@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -182,6 +182,8 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nltk_install.html">Installing NLTK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spacy_install.html">Installing spaCy</a></li>
 </ul>
 
     </div>
@@ -497,6 +499,93 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
+ &#39;December&#39;,
+ &#39;2024&#39;,
+ &#39;,&#39;,
+ &#39;Clean&#39;,
+ &#39;Energy&#39;,
+ &#39;Research&#39;,
+ &#39;Group&#39;,
+ &#39;(&#39;,
+ &#39;CERG&#39;,
+ &#39;)&#39;,
+ &#39;published&#39;,
+ &#39;a&#39;,
+ &#39;paper&#39;,
+ &#39;calling&#39;,
+ &#39;for&#39;,
+ &#39;Canada&#39;,
+ &#39;to&#39;,
+ &#39;build&#39;,
+ &#39;“&#39;,
+ &#39;mass&#39;,
+ &#39;utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;mega&#39;,
+ &#39;projects&#39;,
+ &#39;,&#39;,
+ &#39;”&#39;,
+ &#39;according&#39;,
+ &#39;to&#39;,
+ &#39;an&#39;,
+ &#39;SFU&#39;,
+ &#39;news&#39;,
+ &#39;release&#39;,
+ &#39;.&#39;,
+ &#39;Utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;“&#39;,
+ &#39;refers&#39;,
+ &#39;to&#39;,
+ &#39;large&#39;,
+ &#39;solar&#39;,
+ &#39;installations&#39;,
+ &#39;designed&#39;,
+ &#39;to&#39;,
+ &#39;feed&#39;,
+ &#39;power&#39;,
+ &#39;directly&#39;,
+ &#39;onto&#39;,
+ &#39;the&#39;,
+ &#39;electric&#39;,
+ &#39;grid.&#39;,
+ &#39;”&#39;,
+ &#39;An&#39;,
+ &#39;electric&#39;,
+ &#39;grid&#39;,
+ &#39;is&#39;,
+ &#39;an&#39;,
+ &#39;“&#39;,
+ &#39;intricate&#39;,
+ &#39;system&#39;,
+ &#39;”&#39;,
+ &#39;that&#39;,
+ &#39;provides&#39;,
+ &#39;electricity&#39;,
+ &#39;“&#39;,
+ &#39;all&#39;,
+ &#39;the&#39;,
+ &#39;way&#39;,
+ &#39;from&#39;,
+ &#39;its&#39;,
+ &#39;generation&#39;,
+ &#39;to&#39;,
+ &#39;the&#39;,
+ &#39;customers&#39;,
+ &#39;that&#39;,
+ &#39;use&#39;,
+ &#39;it&#39;,
+ &#39;for&#39;,
+ &#39;their&#39;,
+ &#39;daily&#39;,
+ &#39;needs&#39;,
+ &#39;.&#39;,
+ &#39;”&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -505,11 +594,84 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grid
+electric
+Canada
+to
+system
+In
+solar
+calling
+projects
+Utility-scale
+use
+.
+an
+way
+utility-scale
+that
+designed
+a
+the
+its
+Energy
+“
+installations
+mega
+provides
+(
+,
+December
+feed
+for
+all
+grid.
+Clean
+mass
+it
+paper
+CERG
+Research
+)
+published
+2024
+power
+intricate
+from
+generation
+according
+refers
+An
+release
+”
+is
+build
+Group
+customers
+SFU
+large
+onto
+daily
+their
+news
+directly
+electricity
+needs
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n_tokens1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_types1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83
+63
 </pre></div>
 </div>
 </div>
@@ -530,6 +692,83 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;This&#39;,
+ &#39;got&#39;,
+ &#39;ta&#39;,
+ &#39;be&#39;,
+ &#39;the&#39;,
+ &#39;wéïrdest&#39;,
+ &#39;bit&#39;,
+ &#39;of&#39;,
+ &#39;text&#39;,
+ &#39;that&#39;,
+ &quot;&#39;s&quot;,
+ &quot;ne&#39;er&quot;,
+ &#39;gon&#39;,
+ &#39;na&#39;,
+ &#39;be&#39;,
+ &#39;The&#39;,
+ &#39;thing&#39;,
+ &#39;you&#39;,
+ &quot;&#39;ll&quot;,
+ &#39;encounter&#39;,
+ &#39;,&#39;,
+ &#39;but&#39;,
+ &#39;I&#39;,
+ &#39;have&#39;,
+ &#39;to&#39;,
+ &#39;give&#39;,
+ &#39;,&#39;,
+ &#39;gave&#39;,
+ &#39;,&#39;,
+ &#39;given&#39;,
+ &#39;,&#39;,
+ &#39;something&#39;,
+ &#39;!&#39;,
+ &#39;,&#39;,
+ &#39;even&#39;,
+ &#39;the&#39;,
+ &#39;weirdest&#39;,
+ &#39;.&#39;,
+ &#39;Just&#39;,
+ &#39;tryna&#39;,
+ &#39;throw&#39;,
+ &#39;everything&#39;,
+ &#39;into&#39;,
+ &#39;a&#39;,
+ &#39;made-up&#39;,
+ &#39;bit&#39;,
+ &#39;that&#39;,
+ &#39;is&#39;,
+ &quot;n&#39;t&quot;,
+ &#39;making&#39;,
+ &#39;any&#39;,
+ &#39;sense.&#39;,
+ &#39;&lt;&#39;,
+ &#39;br&#39;,
+ &#39;&gt;&#39;,
+ &#39;And&#39;,
+ &#39;here&#39;,
+ &quot;&#39;s&quot;,
+ &#39;a&#39;,
+ &#39;sentence&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;feet&#39;,
+ &#39;and&#39;,
+ &#39;one&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;geese&#39;,
+ &#39;.&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -538,11 +777,78 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>even
+to
+one
+ta
+you
+&#39;ll
+ne&#39;er
+.
+Just
+The
+weirdest
+n&#39;t
+have
+making
+given
+br
+with
+the
+but
+something
+text
+a
+This
+gon
+geese
+irregular
+,
+and
+throw
+sense.
+I
+tryna
+encounter
+be
+&gt;
+here
+bit
+na
+&lt;
+&#39;s
+sentence
+everything
+wéïrdest
+!
+gave
+thing
+made-up
+any
+feet
+got
+give
+is
+plural
+of
+And
+that
+into
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n_tokens2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_types2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73
+57
 </pre></div>
 </div>
 </div>
@@ -565,6 +871,93 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;in&#39;,
+ &#39;december&#39;,
+ &#39;2024&#39;,
+ &#39;,&#39;,
+ &#39;clean&#39;,
+ &#39;energy&#39;,
+ &#39;research&#39;,
+ &#39;group&#39;,
+ &#39;(&#39;,
+ &#39;cerg&#39;,
+ &#39;)&#39;,
+ &#39;published&#39;,
+ &#39;a&#39;,
+ &#39;paper&#39;,
+ &#39;calling&#39;,
+ &#39;for&#39;,
+ &#39;canada&#39;,
+ &#39;to&#39;,
+ &#39;build&#39;,
+ &#39;“&#39;,
+ &#39;mass&#39;,
+ &#39;utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;mega&#39;,
+ &#39;projects&#39;,
+ &#39;,&#39;,
+ &#39;”&#39;,
+ &#39;according&#39;,
+ &#39;to&#39;,
+ &#39;an&#39;,
+ &#39;sfu&#39;,
+ &#39;news&#39;,
+ &#39;release&#39;,
+ &#39;.&#39;,
+ &#39;utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;“&#39;,
+ &#39;refers&#39;,
+ &#39;to&#39;,
+ &#39;large&#39;,
+ &#39;solar&#39;,
+ &#39;installations&#39;,
+ &#39;designed&#39;,
+ &#39;to&#39;,
+ &#39;feed&#39;,
+ &#39;power&#39;,
+ &#39;directly&#39;,
+ &#39;onto&#39;,
+ &#39;the&#39;,
+ &#39;electric&#39;,
+ &#39;grid.&#39;,
+ &#39;”&#39;,
+ &#39;an&#39;,
+ &#39;electric&#39;,
+ &#39;grid&#39;,
+ &#39;is&#39;,
+ &#39;an&#39;,
+ &#39;“&#39;,
+ &#39;intricate&#39;,
+ &#39;system&#39;,
+ &#39;”&#39;,
+ &#39;that&#39;,
+ &#39;provides&#39;,
+ &#39;electricity&#39;,
+ &#39;“&#39;,
+ &#39;all&#39;,
+ &#39;the&#39;,
+ &#39;way&#39;,
+ &#39;from&#39;,
+ &#39;its&#39;,
+ &#39;generation&#39;,
+ &#39;to&#39;,
+ &#39;the&#39;,
+ &#39;customers&#39;,
+ &#39;that&#39;,
+ &#39;use&#39;,
+ &#39;it&#39;,
+ &#39;for&#39;,
+ &#39;their&#39;,
+ &#39;daily&#39;,
+ &#39;needs&#39;,
+ &#39;.&#39;,
+ &#39;”&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -578,6 +971,13 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n_tokens1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_types1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_types1_lower</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>83
+63
+61
 </pre></div>
 </div>
 </div>
@@ -596,6 +996,83 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;this&#39;,
+ &#39;got&#39;,
+ &#39;ta&#39;,
+ &#39;be&#39;,
+ &#39;the&#39;,
+ &#39;wéïrdest&#39;,
+ &#39;bit&#39;,
+ &#39;of&#39;,
+ &#39;text&#39;,
+ &#39;that&#39;,
+ &quot;&#39;s&quot;,
+ &quot;ne&#39;er&quot;,
+ &#39;gon&#39;,
+ &#39;na&#39;,
+ &#39;be&#39;,
+ &#39;the&#39;,
+ &#39;thing&#39;,
+ &#39;you&#39;,
+ &quot;&#39;ll&quot;,
+ &#39;encounter&#39;,
+ &#39;,&#39;,
+ &#39;but&#39;,
+ &#39;i&#39;,
+ &#39;have&#39;,
+ &#39;to&#39;,
+ &#39;give&#39;,
+ &#39;,&#39;,
+ &#39;gave&#39;,
+ &#39;,&#39;,
+ &#39;given&#39;,
+ &#39;,&#39;,
+ &#39;something&#39;,
+ &#39;!&#39;,
+ &#39;,&#39;,
+ &#39;even&#39;,
+ &#39;the&#39;,
+ &#39;weirdest&#39;,
+ &#39;.&#39;,
+ &#39;just&#39;,
+ &#39;tryna&#39;,
+ &#39;throw&#39;,
+ &#39;everything&#39;,
+ &#39;into&#39;,
+ &#39;a&#39;,
+ &#39;made-up&#39;,
+ &#39;bit&#39;,
+ &#39;that&#39;,
+ &#39;is&#39;,
+ &quot;n&#39;t&quot;,
+ &#39;making&#39;,
+ &#39;any&#39;,
+ &#39;sense.&#39;,
+ &#39;&lt;&#39;,
+ &#39;br&#39;,
+ &#39;&gt;&#39;,
+ &#39;and&#39;,
+ &#39;here&#39;,
+ &quot;&#39;s&quot;,
+ &#39;a&#39;,
+ &#39;sentence&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;feet&#39;,
+ &#39;and&#39;,
+ &#39;one&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;geese&#39;,
+ &#39;.&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -609,6 +1086,13 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n_tokens2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_types2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">n_types2_lower</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73
+57
+55
 </pre></div>
 </div>
 </div>
@@ -645,10 +1129,174 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;thi&#39;,
+ &#39;got&#39;,
+ &#39;ta&#39;,
+ &#39;be&#39;,
+ &#39;the&#39;,
+ &#39;wéïrdest&#39;,
+ &#39;bit&#39;,
+ &#39;of&#39;,
+ &#39;text&#39;,
+ &#39;that&#39;,
+ &quot;&#39;s&quot;,
+ &quot;ne&#39;er&quot;,
+ &#39;gon&#39;,
+ &#39;na&#39;,
+ &#39;be&#39;,
+ &#39;the&#39;,
+ &#39;thing&#39;,
+ &#39;you&#39;,
+ &quot;&#39;ll&quot;,
+ &#39;encount&#39;,
+ &#39;,&#39;,
+ &#39;but&#39;,
+ &#39;i&#39;,
+ &#39;have&#39;,
+ &#39;to&#39;,
+ &#39;give&#39;,
+ &#39;,&#39;,
+ &#39;gave&#39;,
+ &#39;,&#39;,
+ &#39;given&#39;,
+ &#39;,&#39;,
+ &#39;someth&#39;,
+ &#39;!&#39;,
+ &#39;,&#39;,
+ &#39;even&#39;,
+ &#39;the&#39;,
+ &#39;weirdest&#39;,
+ &#39;.&#39;,
+ &#39;just&#39;,
+ &#39;tryna&#39;,
+ &#39;throw&#39;,
+ &#39;everyth&#39;,
+ &#39;into&#39;,
+ &#39;a&#39;,
+ &#39;made-up&#39;,
+ &#39;bit&#39;,
+ &#39;that&#39;,
+ &#39;is&#39;,
+ &quot;n&#39;t&quot;,
+ &#39;make&#39;,
+ &#39;ani&#39;,
+ &#39;sense.&#39;,
+ &#39;&lt;&#39;,
+ &#39;br&#39;,
+ &#39;&gt;&#39;,
+ &#39;and&#39;,
+ &#39;here&#39;,
+ &quot;&#39;s&quot;,
+ &#39;a&#39;,
+ &#39;sentenc&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;feet&#39;,
+ &#39;and&#39;,
+ &#39;one&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;gees&#39;,
+ &#39;.&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;In&#39;,
+ &#39;December&#39;,
+ &#39;2024&#39;,
+ &#39;,&#39;,
+ &#39;Clean&#39;,
+ &#39;Energy&#39;,
+ &#39;Research&#39;,
+ &#39;Group&#39;,
+ &#39;(&#39;,
+ &#39;CERG&#39;,
+ &#39;)&#39;,
+ &#39;published&#39;,
+ &#39;a&#39;,
+ &#39;paper&#39;,
+ &#39;calling&#39;,
+ &#39;for&#39;,
+ &#39;Canada&#39;,
+ &#39;to&#39;,
+ &#39;build&#39;,
+ &#39;“&#39;,
+ &#39;mass&#39;,
+ &#39;utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;mega&#39;,
+ &#39;projects&#39;,
+ &#39;,&#39;,
+ &#39;”&#39;,
+ &#39;according&#39;,
+ &#39;to&#39;,
+ &#39;an&#39;,
+ &#39;SFU&#39;,
+ &#39;news&#39;,
+ &#39;release&#39;,
+ &#39;.&#39;,
+ &#39;Utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;“&#39;,
+ &#39;refers&#39;,
+ &#39;to&#39;,
+ &#39;large&#39;,
+ &#39;solar&#39;,
+ &#39;installations&#39;,
+ &#39;designed&#39;,
+ &#39;to&#39;,
+ &#39;feed&#39;,
+ &#39;power&#39;,
+ &#39;directly&#39;,
+ &#39;onto&#39;,
+ &#39;the&#39;,
+ &#39;electric&#39;,
+ &#39;grid.&#39;,
+ &#39;”&#39;,
+ &#39;An&#39;,
+ &#39;electric&#39;,
+ &#39;grid&#39;,
+ &#39;is&#39;,
+ &#39;an&#39;,
+ &#39;“&#39;,
+ &#39;intricate&#39;,
+ &#39;system&#39;,
+ &#39;”&#39;,
+ &#39;that&#39;,
+ &#39;provides&#39;,
+ &#39;electricity&#39;,
+ &#39;“&#39;,
+ &#39;all&#39;,
+ &#39;the&#39;,
+ &#39;way&#39;,
+ &#39;from&#39;,
+ &#39;its&#39;,
+ &#39;generation&#39;,
+ &#39;to&#39;,
+ &#39;the&#39;,
+ &#39;customers&#39;,
+ &#39;that&#39;,
+ &#39;use&#39;,
+ &#39;it&#39;,
+ &#39;for&#39;,
+ &#39;their&#39;,
+ &#39;daily&#39;,
+ &#39;needs&#39;,
+ &#39;.&#39;,
+ &#39;”&#39;]
 </pre></div>
 </div>
 </div>
@@ -671,10 +1319,174 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;in&#39;,
+ &#39;december&#39;,
+ &#39;2024&#39;,
+ &#39;,&#39;,
+ &#39;clean&#39;,
+ &#39;energy&#39;,
+ &#39;research&#39;,
+ &#39;group&#39;,
+ &#39;(&#39;,
+ &#39;cerg&#39;,
+ &#39;)&#39;,
+ &#39;published&#39;,
+ &#39;a&#39;,
+ &#39;paper&#39;,
+ &#39;calling&#39;,
+ &#39;for&#39;,
+ &#39;canada&#39;,
+ &#39;to&#39;,
+ &#39;build&#39;,
+ &#39;“&#39;,
+ &#39;mass&#39;,
+ &#39;utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;mega&#39;,
+ &#39;project&#39;,
+ &#39;,&#39;,
+ &#39;”&#39;,
+ &#39;according&#39;,
+ &#39;to&#39;,
+ &#39;an&#39;,
+ &#39;sfu&#39;,
+ &#39;news&#39;,
+ &#39;release&#39;,
+ &#39;.&#39;,
+ &#39;utility-scale&#39;,
+ &#39;solar&#39;,
+ &#39;“&#39;,
+ &#39;refers&#39;,
+ &#39;to&#39;,
+ &#39;large&#39;,
+ &#39;solar&#39;,
+ &#39;installation&#39;,
+ &#39;designed&#39;,
+ &#39;to&#39;,
+ &#39;feed&#39;,
+ &#39;power&#39;,
+ &#39;directly&#39;,
+ &#39;onto&#39;,
+ &#39;the&#39;,
+ &#39;electric&#39;,
+ &#39;grid.&#39;,
+ &#39;”&#39;,
+ &#39;an&#39;,
+ &#39;electric&#39;,
+ &#39;grid&#39;,
+ &#39;is&#39;,
+ &#39;an&#39;,
+ &#39;“&#39;,
+ &#39;intricate&#39;,
+ &#39;system&#39;,
+ &#39;”&#39;,
+ &#39;that&#39;,
+ &#39;provides&#39;,
+ &#39;electricity&#39;,
+ &#39;“&#39;,
+ &#39;all&#39;,
+ &#39;the&#39;,
+ &#39;way&#39;,
+ &#39;from&#39;,
+ &#39;it&#39;,
+ &#39;generation&#39;,
+ &#39;to&#39;,
+ &#39;the&#39;,
+ &#39;customer&#39;,
+ &#39;that&#39;,
+ &#39;use&#39;,
+ &#39;it&#39;,
+ &#39;for&#39;,
+ &#39;their&#39;,
+ &#39;daily&#39;,
+ &#39;need&#39;,
+ &#39;.&#39;,
+ &#39;”&#39;]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokens2_lm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;this&#39;,
+ &#39;got&#39;,
+ &#39;ta&#39;,
+ &#39;be&#39;,
+ &#39;the&#39;,
+ &#39;wéïrdest&#39;,
+ &#39;bit&#39;,
+ &#39;of&#39;,
+ &#39;text&#39;,
+ &#39;that&#39;,
+ &quot;&#39;s&quot;,
+ &quot;ne&#39;er&quot;,
+ &#39;gon&#39;,
+ &#39;na&#39;,
+ &#39;be&#39;,
+ &#39;the&#39;,
+ &#39;thing&#39;,
+ &#39;you&#39;,
+ &quot;&#39;ll&quot;,
+ &#39;encounter&#39;,
+ &#39;,&#39;,
+ &#39;but&#39;,
+ &#39;i&#39;,
+ &#39;have&#39;,
+ &#39;to&#39;,
+ &#39;give&#39;,
+ &#39;,&#39;,
+ &#39;gave&#39;,
+ &#39;,&#39;,
+ &#39;given&#39;,
+ &#39;,&#39;,
+ &#39;something&#39;,
+ &#39;!&#39;,
+ &#39;,&#39;,
+ &#39;even&#39;,
+ &#39;the&#39;,
+ &#39;weirdest&#39;,
+ &#39;.&#39;,
+ &#39;just&#39;,
+ &#39;tryna&#39;,
+ &#39;throw&#39;,
+ &#39;everything&#39;,
+ &#39;into&#39;,
+ &#39;a&#39;,
+ &#39;made-up&#39;,
+ &#39;bit&#39;,
+ &#39;that&#39;,
+ &#39;is&#39;,
+ &quot;n&#39;t&quot;,
+ &#39;making&#39;,
+ &#39;any&#39;,
+ &#39;sense.&#39;,
+ &#39;&lt;&#39;,
+ &#39;br&#39;,
+ &#39;&gt;&#39;,
+ &#39;and&#39;,
+ &#39;here&#39;,
+ &quot;&#39;s&quot;,
+ &#39;a&#39;,
+ &#39;sentence&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;foot&#39;,
+ &#39;and&#39;,
+ &#39;one&#39;,
+ &#39;with&#39;,
+ &#39;the&#39;,
+ &#39;irregular&#39;,
+ &#39;plural&#39;,
+ &#39;goose&#39;,
+ &#39;.&#39;]
 </pre></div>
 </div>
 </div>
@@ -707,6 +1519,98 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In
+December
+2024
+,
+Clean
+Energy
+Research
+Group
+(
+CERG
+)
+published
+a
+paper
+calling
+for
+Canada
+to
+build
+“
+mass
+utility
+-
+scale
+solar
+mega
+projects
+,
+”
+according
+to
+an
+SFU
+news
+release
+.
+Utility
+-
+scale
+solar
+“
+refers
+to
+large
+solar
+installations
+designed
+to
+feed
+power
+directly
+onto
+the
+electric
+grid
+.
+”
+An
+electric
+grid
+is
+an
+“
+intricate
+system
+”
+that
+provides
+electricity
+“
+all
+the
+way
+from
+its
+generation
+to
+the
+customers
+that
+use
+it
+for
+their
+daily
+needs
+.
+”
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -714,6 +1618,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">token</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc1</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># this is just so that the two texts are separated on the screen by an empty line</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">token</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc2</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In December 2024 , Clean Energy Research Group ( CERG ) published a paper calling for Canada to build “ mass utility - scale solar mega projects , ” according to an SFU news release . Utility - scale solar “ refers to large solar installations designed to feed power directly onto the electric grid . ” An electric grid is an “ intricate system ” that provides electricity “ all the way from its generation to the customers that use it for their daily needs . ”
+
+This got ta be the wéïrdest bit of text that &#39;s ne&#39;er gon na be The thing you &#39;ll encounter , but I have to give , gave , given , something ! 
+ , even the weirdest . Just tryna throw everything into a made - up bit that is n&#39;t making any sense.&lt;br &gt; And here &#39;s a sentence with the irregular plural feet and one with the irregular plural geese .
 </pre></div>
 </div>
 </div>
@@ -727,6 +1639,14 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>in December 2024 , Clean Energy Research Group ( CERG ) publish a paper call for Canada to build &quot; mass utility - scale solar mega project , &quot; accord to an SFU news release . utility - scale solar &quot; refer to large solar installation design to feed power directly onto the electric grid . &quot; an electric grid be an &quot; intricate system &quot; that provide electricity &quot; all the way from its generation to the customer that use it for their daily need . &quot;
+
+this get to be the wéïrd bit of text that be ne&#39;er go to be the thing you will encounter , but I have to give , give , give , something ! 
+ , even the weird . just tryna throw everything into a make - up bit that be not make any sense.&lt;br &gt; and here be a sentence with the irregular plural foot and one with the irregular plural geese .
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -734,6 +1654,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">token</span><span class="o">.</span><span class="n">pos_</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc1</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\r</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">token</span><span class="o">.</span><span class="n">pos_</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc2</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In/ADP December/PROPN 2024/NUM ,/PUNCT Clean/PROPN Energy/PROPN Research/PROPN Group/PROPN (/PUNCT CERG/PROPN )/PUNCT published/VERB a/DET paper/NOUN calling/VERB for/SCONJ Canada/PROPN to/PART build/VERB “/PUNCT mass/ADJ utility/NOUN -/PUNCT scale/NOUN solar/ADJ mega/ADJ projects/NOUN ,/PUNCT ”/PUNCT according/VERB to/ADP an/DET SFU/PROPN news/NOUN release/NOUN ./PUNCT Utility/NOUN -/PUNCT scale/NOUN solar/NOUN “/PUNCT refers/VERB to/ADP large/ADJ solar/ADJ installations/NOUN designed/VERB to/PART feed/VERB power/NOUN directly/ADV onto/ADP the/DET electric/ADJ grid/NOUN ./PUNCT ”/PUNCT An/DET electric/ADJ grid/NOUN is/AUX an/DET “/PUNCT intricate/ADJ system/NOUN ”/PUNCT that/PRON provides/VERB electricity/NOUN “/PUNCT all/DET the/DET way/NOUN from/ADP its/PRON generation/NOUN to/ADP the/DET customers/NOUN that/PRON use/VERB it/PRON for/ADP their/PRON daily/ADJ needs/NOUN ./PUNCT ”/PUNCT
+
+This/PRON got/VERB ta/PART be/AUX the/DET wéïrdest/ADJ bit/NOUN of/ADP text/NOUN that/PRON &#39;s/AUX ne&#39;er/NOUN gon/VERB na/PART be/AUX The/DET thing/NOUN you/PRON &#39;ll/AUX encounter/VERB ,/PUNCT but/CCONJ I/PRON have/VERB to/PART give/VERB ,/PUNCT gave/VERB ,/PUNCT given/VERB ,/PUNCT something/PRON !/PUNCT 
+/SPACE ,/PUNCT even/ADV the/DET weirdest/ADJ ./PUNCT Just/ADV tryna/NOUN throw/VERB everything/PRON into/ADP a/DET made/VERB -/PUNCT up/ADP bit/NOUN that/PRON is/AUX n&#39;t/PART making/VERB any/DET sense.&lt;br/X &gt;/X And/CCONJ here/ADV &#39;s/AUX a/DET sentence/NOUN with/ADP the/DET irregular/ADJ plural/ADJ feet/NOUN and/CCONJ one/NUM with/ADP the/DET irregular/ADJ plural/ADJ geese/PROPN ./PUNCT
 </pre></div>
 </div>
 </div>
@@ -747,12 +1675,109 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In 		 in 		 ADP 		 
+December 		 December 		 PROPN 		 Number=Sing
+2024 		 2024 		 NUM 		 NumType=Card
+, 		 , 		 PUNCT 		 PunctType=Comm
+Clean 		 Clean 		 PROPN 		 Number=Sing
+Energy 		 Energy 		 PROPN 		 Number=Sing
+Research 		 Research 		 PROPN 		 Number=Sing
+Group 		 Group 		 PROPN 		 Number=Sing
+( 		 ( 		 PUNCT 		 PunctSide=Ini|PunctType=Brck
+CERG 		 CERG 		 PROPN 		 Number=Sing
+) 		 ) 		 PUNCT 		 PunctSide=Fin|PunctType=Brck
+published 		 publish 		 VERB 		 Tense=Past|VerbForm=Fin
+a 		 a 		 DET 		 Definite=Ind|PronType=Art
+paper 		 paper 		 NOUN 		 Number=Sing
+calling 		 call 		 VERB 		 Aspect=Prog|Tense=Pres|VerbForm=Part
+for 		 for 		 SCONJ 		 
+Canada 		 Canada 		 PROPN 		 Number=Sing
+to 		 to 		 PART 		 
+build 		 build 		 VERB 		 VerbForm=Inf
+“ 		 &quot; 		 PUNCT 		 PunctSide=Ini|PunctType=Quot
+mass 		 mass 		 ADJ 		 Degree=Pos
+utility 		 utility 		 NOUN 		 Number=Sing
+- 		 - 		 PUNCT 		 PunctType=Dash
+scale 		 scale 		 NOUN 		 Number=Sing
+solar 		 solar 		 ADJ 		 Degree=Pos
+mega 		 mega 		 ADJ 		 Degree=Pos
+projects 		 project 		 NOUN 		 Number=Plur
+, 		 , 		 PUNCT 		 PunctType=Comm
+” 		 &quot; 		 PUNCT 		 PunctSide=Fin|PunctType=Quot
+according 		 accord 		 VERB 		 Aspect=Prog|Tense=Pres|VerbForm=Part
+to 		 to 		 ADP 		 
+an 		 an 		 DET 		 Definite=Ind|PronType=Art
+SFU 		 SFU 		 PROPN 		 Number=Sing
+news 		 news 		 NOUN 		 Number=Sing
+release 		 release 		 NOUN 		 Number=Sing
+. 		 . 		 PUNCT 		 PunctType=Peri
+Utility 		 utility 		 NOUN 		 Number=Sing
+- 		 - 		 PUNCT 		 PunctType=Dash
+scale 		 scale 		 NOUN 		 Number=Sing
+solar 		 solar 		 NOUN 		 Number=Sing
+“ 		 &quot; 		 PUNCT 		 PunctSide=Ini|PunctType=Quot
+refers 		 refer 		 VERB 		 Number=Sing|Person=3|Tense=Pres|VerbForm=Fin
+to 		 to 		 ADP 		 
+large 		 large 		 ADJ 		 Degree=Pos
+solar 		 solar 		 ADJ 		 Degree=Pos
+installations 		 installation 		 NOUN 		 Number=Plur
+designed 		 design 		 VERB 		 Aspect=Perf|Tense=Past|VerbForm=Part
+to 		 to 		 PART 		 
+feed 		 feed 		 VERB 		 VerbForm=Inf
+power 		 power 		 NOUN 		 Number=Sing
+directly 		 directly 		 ADV 		 
+onto 		 onto 		 ADP 		 
+the 		 the 		 DET 		 Definite=Def|PronType=Art
+electric 		 electric 		 ADJ 		 Degree=Pos
+grid 		 grid 		 NOUN 		 Number=Sing
+. 		 . 		 PUNCT 		 PunctType=Peri
+” 		 &quot; 		 PUNCT 		 PunctSide=Fin|PunctType=Quot
+An 		 an 		 DET 		 Definite=Ind|PronType=Art
+electric 		 electric 		 ADJ 		 Degree=Pos
+grid 		 grid 		 NOUN 		 Number=Sing
+is 		 be 		 AUX 		 Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin
+an 		 an 		 DET 		 Definite=Ind|PronType=Art
+“ 		 &quot; 		 PUNCT 		 PunctSide=Ini|PunctType=Quot
+intricate 		 intricate 		 ADJ 		 Degree=Pos
+system 		 system 		 NOUN 		 Number=Sing
+” 		 &quot; 		 PUNCT 		 PunctSide=Fin|PunctType=Quot
+that 		 that 		 PRON 		 PronType=Rel
+provides 		 provide 		 VERB 		 Number=Sing|Person=3|Tense=Pres|VerbForm=Fin
+electricity 		 electricity 		 NOUN 		 Number=Sing
+“ 		 &quot; 		 PUNCT 		 PunctSide=Ini|PunctType=Quot
+all 		 all 		 DET 		 
+the 		 the 		 DET 		 Definite=Def|PronType=Art
+way 		 way 		 NOUN 		 Number=Sing
+from 		 from 		 ADP 		 
+its 		 its 		 PRON 		 Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs
+generation 		 generation 		 NOUN 		 Number=Sing
+to 		 to 		 ADP 		 
+the 		 the 		 DET 		 Definite=Def|PronType=Art
+customers 		 customer 		 NOUN 		 Number=Plur
+that 		 that 		 PRON 		 PronType=Rel
+use 		 use 		 VERB 		 Tense=Pres|VerbForm=Fin
+it 		 it 		 PRON 		 Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs
+for 		 for 		 ADP 		 
+their 		 their 		 PRON 		 Number=Plur|Person=3|Poss=Yes|PronType=Prs
+daily 		 daily 		 ADJ 		 Degree=Pos
+needs 		 need 		 NOUN 		 Number=Plur
+. 		 . 		 PUNCT 		 PunctType=Peri
+” 		 &quot; 		 PUNCT 		 PunctSide=Fin|PunctType=Quot
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># if you don&#39;t know what the abbreviations mean, </span>
 <span class="c1"># you can ask for an explanation</span>
 <span class="n">spacy</span><span class="o">.</span><span class="n">explain</span><span class="p">(</span><span class="s2">&quot;ADP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;adposition&#39;
 </pre></div>
 </div>
 </div>
@@ -763,6 +1788,98 @@ document.write(`
 <span class="c1"># including rich morphology for each word</span>
 <span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc1</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">pos_</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">dep_</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">head</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In 		 ADP 		 prep 		 published
+December 		 PROPN 		 pobj 		 In
+2024 		 NUM 		 nummod 		 December
+, 		 PUNCT 		 punct 		 published
+Clean 		 PROPN 		 compound 		 Energy
+Energy 		 PROPN 		 compound 		 Group
+Research 		 PROPN 		 compound 		 Group
+Group 		 PROPN 		 nsubj 		 published
+( 		 PUNCT 		 punct 		 Group
+CERG 		 PROPN 		 appos 		 Group
+) 		 PUNCT 		 punct 		 Group
+published 		 VERB 		 ROOT 		 published
+a 		 DET 		 det 		 paper
+paper 		 NOUN 		 dobj 		 published
+calling 		 VERB 		 acl 		 paper
+for 		 SCONJ 		 mark 		 build
+Canada 		 PROPN 		 nsubj 		 build
+to 		 PART 		 aux 		 build
+build 		 VERB 		 advcl 		 calling
+“ 		 PUNCT 		 punct 		 projects
+mass 		 ADJ 		 amod 		 projects
+utility 		 NOUN 		 nmod 		 scale
+- 		 PUNCT 		 punct 		 scale
+scale 		 NOUN 		 nmod 		 projects
+solar 		 ADJ 		 amod 		 mega
+mega 		 ADJ 		 compound 		 projects
+projects 		 NOUN 		 dobj 		 build
+, 		 PUNCT 		 punct 		 published
+” 		 PUNCT 		 punct 		 published
+according 		 VERB 		 prep 		 published
+to 		 ADP 		 prep 		 according
+an 		 DET 		 det 		 release
+SFU 		 PROPN 		 compound 		 release
+news 		 NOUN 		 compound 		 release
+release 		 NOUN 		 pobj 		 to
+. 		 PUNCT 		 punct 		 published
+Utility 		 NOUN 		 compound 		 scale
+- 		 PUNCT 		 punct 		 scale
+scale 		 NOUN 		 compound 		 solar
+solar 		 NOUN 		 nsubj 		 refers
+“ 		 PUNCT 		 punct 		 refers
+refers 		 VERB 		 ROOT 		 refers
+to 		 ADP 		 prep 		 refers
+large 		 ADJ 		 amod 		 installations
+solar 		 ADJ 		 amod 		 installations
+installations 		 NOUN 		 pobj 		 to
+designed 		 VERB 		 acl 		 installations
+to 		 PART 		 aux 		 feed
+feed 		 VERB 		 xcomp 		 designed
+power 		 NOUN 		 dobj 		 feed
+directly 		 ADV 		 advmod 		 onto
+onto 		 ADP 		 prep 		 feed
+the 		 DET 		 det 		 grid
+electric 		 ADJ 		 amod 		 grid
+grid 		 NOUN 		 pobj 		 onto
+. 		 PUNCT 		 punct 		 refers
+” 		 PUNCT 		 punct 		 refers
+An 		 DET 		 det 		 grid
+electric 		 ADJ 		 amod 		 grid
+grid 		 NOUN 		 nsubj 		 is
+is 		 AUX 		 ROOT 		 is
+an 		 DET 		 det 		 system
+“ 		 PUNCT 		 punct 		 system
+intricate 		 ADJ 		 amod 		 system
+system 		 NOUN 		 attr 		 is
+” 		 PUNCT 		 punct 		 system
+that 		 PRON 		 nsubj 		 provides
+provides 		 VERB 		 relcl 		 system
+electricity 		 NOUN 		 dobj 		 provides
+“ 		 PUNCT 		 punct 		 system
+all 		 DET 		 predet 		 way
+the 		 DET 		 det 		 way
+way 		 NOUN 		 npadvmod 		 from
+from 		 ADP 		 prep 		 system
+its 		 PRON 		 poss 		 generation
+generation 		 NOUN 		 pobj 		 from
+to 		 ADP 		 prep 		 from
+the 		 DET 		 det 		 customers
+customers 		 NOUN 		 pobj 		 to
+that 		 PRON 		 nsubj 		 use
+use 		 VERB 		 relcl 		 customers
+it 		 PRON 		 dobj 		 use
+for 		 ADP 		 prep 		 use
+their 		 PRON 		 poss 		 needs
+daily 		 ADJ 		 amod 		 needs
+needs 		 NOUN 		 pobj 		 for
+. 		 PUNCT 		 punct 		 is
+” 		 PUNCT 		 punct 		 is
 </pre></div>
 </div>
 </div>
@@ -785,6 +1902,16 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tokens:  [&#39;In&#39;, &#39;December&#39;, &#39;2024&#39;, &#39;,&#39;, &#39;Clean&#39;, &#39;Energy&#39;, &#39;Research&#39;, &#39;Group&#39;, &#39;(&#39;, &#39;CERG&#39;, &#39;)&#39;, &#39;published&#39;, &#39;a&#39;, &#39;paper&#39;, &#39;calling&#39;, &#39;for&#39;, &#39;Canada&#39;, &#39;to&#39;, &#39;build&#39;, &#39;“&#39;, &#39;mass&#39;, &#39;utility&#39;, &#39;-&#39;, &#39;scale&#39;, &#39;solar&#39;, &#39;mega&#39;, &#39;projects&#39;, &#39;,&#39;, &#39;”&#39;, &#39;according&#39;, &#39;to&#39;, &#39;an&#39;, &#39;SFU&#39;, &#39;news&#39;, &#39;release&#39;, &#39;.&#39;, &#39;Utility&#39;, &#39;-&#39;, &#39;scale&#39;, &#39;solar&#39;, &#39;“&#39;, &#39;refers&#39;, &#39;to&#39;, &#39;large&#39;, &#39;solar&#39;, &#39;installations&#39;, &#39;designed&#39;, &#39;to&#39;, &#39;feed&#39;, &#39;power&#39;, &#39;directly&#39;, &#39;onto&#39;, &#39;the&#39;, &#39;electric&#39;, &#39;grid&#39;, &#39;.&#39;, &#39;”&#39;, &#39;An&#39;, &#39;electric&#39;, &#39;grid&#39;, &#39;is&#39;, &#39;an&#39;, &#39;“&#39;, &#39;intricate&#39;, &#39;system&#39;, &#39;”&#39;, &#39;that&#39;, &#39;provides&#39;, &#39;electricity&#39;, &#39;“&#39;, &#39;all&#39;, &#39;the&#39;, &#39;way&#39;, &#39;from&#39;, &#39;its&#39;, &#39;generation&#39;, &#39;to&#39;, &#39;the&#39;, &#39;customers&#39;, &#39;that&#39;, &#39;use&#39;, &#39;it&#39;, &#39;for&#39;, &#39;their&#39;, &#39;daily&#39;, &#39;needs&#39;, &#39;.&#39;, &#39;”&#39;]
+
+types:  {&#39;grid&#39;, &#39;electric&#39;, &#39;Canada&#39;, &#39;to&#39;, &#39;system&#39;, &#39;In&#39;, &#39;solar&#39;, &#39;calling&#39;, &#39;utility&#39;, &#39;projects&#39;, &#39;use&#39;, &#39;.&#39;, &#39;an&#39;, &#39;way&#39;, &#39;that&#39;, &#39;designed&#39;, &#39;-&#39;, &#39;a&#39;, &#39;the&#39;, &#39;its&#39;, &#39;Energy&#39;, &#39;“&#39;, &#39;installations&#39;, &#39;mega&#39;, &#39;provides&#39;, &#39;(&#39;, &#39;,&#39;, &#39;December&#39;, &#39;feed&#39;, &#39;for&#39;, &#39;all&#39;, &#39;Clean&#39;, &#39;mass&#39;, &#39;it&#39;, &#39;paper&#39;, &#39;CERG&#39;, &#39;Research&#39;, &#39;scale&#39;, &#39;)&#39;, &#39;published&#39;, &#39;2024&#39;, &#39;power&#39;, &#39;intricate&#39;, &#39;from&#39;, &#39;generation&#39;, &#39;according&#39;, &#39;refers&#39;, &#39;Utility&#39;, &#39;An&#39;, &#39;release&#39;, &#39;”&#39;, &#39;is&#39;, &#39;build&#39;, &#39;Group&#39;, &#39;customers&#39;, &#39;SFU&#39;, &#39;large&#39;, &#39;onto&#39;, &#39;daily&#39;, &#39;their&#39;, &#39;news&#39;, &#39;directly&#39;, &#39;electricity&#39;, &#39;needs&#39;}
+
+number of tokens:  88
+number of types:  64
+</pre></div>
+</div>
+</div>
 </div>
 <section id="using-pandas-to-show-the-output">
 <h3>Using pandas to show the output<a class="headerlink" href="#using-pandas-to-show-the-output" title="Link to this heading">#</a></h3>
@@ -803,6 +1930,113 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Text</th>
+      <th>Tag</th>
+      <th>Dependency</th>
+      <th>Head</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>In</td>
+      <td>ADP</td>
+      <td>prep</td>
+      <td>published</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>December</td>
+      <td>PROPN</td>
+      <td>pobj</td>
+      <td>In</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2024</td>
+      <td>NUM</td>
+      <td>nummod</td>
+      <td>December</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>,</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>published</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Clean</td>
+      <td>PROPN</td>
+      <td>compound</td>
+      <td>Energy</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>their</td>
+      <td>PRON</td>
+      <td>poss</td>
+      <td>needs</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>daily</td>
+      <td>ADJ</td>
+      <td>amod</td>
+      <td>needs</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>needs</td>
+      <td>NOUN</td>
+      <td>pobj</td>
+      <td>for</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>.</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>is</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>”</td>
+      <td>PUNCT</td>
+      <td>punct</td>
+      <td>is</td>
+    </tr>
+  </tbody>
+</table>
+<p>88 rows × 4 columns</p>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -822,12 +2056,27 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>December 2024 DATE
+Clean Energy Research Group ORG
+CERG ORG
+Canada GPE
+SFU ORG
+daily DATE
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># same for doc2, but it doesn&#39;t contain entities</span>
 <span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">doc2</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">ent</span><span class="o">.</span><span class="n">label_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>geese NORP
 </pre></div>
 </div>
 </div>
@@ -847,6 +2096,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;December 2024&#39;, &#39;DATE&#39;), (&#39;Clean Energy Research Group&#39;, &#39;ORG&#39;), (&#39;CERG&#39;, &#39;ORG&#39;), (&#39;Canada&#39;, &#39;GPE&#39;), (&#39;SFU&#39;, &#39;ORG&#39;), (&#39;daily&#39;, &#39;DATE&#39;)]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -859,6 +2113,63 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>Label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>December 2024</td>
+      <td>DATE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Clean Energy Research Group</td>
+      <td>ORG</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>CERG</td>
+      <td>ORG</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Canada</td>
+      <td>GPE</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>SFU</td>
+      <td>ORG</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>daily</td>
+      <td>DATE</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -867,6 +2178,38 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><span class="tex2jax_ignore"><div class="entities" style="line-height: 2.5; direction: ltr">In 
+<mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    December 2024
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">DATE</span>
+</mark>
+, 
+<mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Clean Energy Research Group
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">ORG</span>
+</mark>
+ (
+<mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    CERG
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">ORG</span>
+</mark>
+) published a paper calling for 
+<mark class="entity" style="background: #feca74; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    Canada
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">GPE</span>
+</mark>
+ to build “mass utility-scale solar mega projects,” according to an 
+<mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    SFU
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">ORG</span>
+</mark>
+ news release. Utility-scale solar “refers to large solar installations designed to feed power directly onto the electric grid.” An electric grid is an “intricate system” that provides electricity “all the way from its generation to the customers that use it for their 
+<mark class="entity" style="background: #bfe1d9; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
+    daily
+    <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">DATE</span>
+</mark>
+ needs.”</div></span></div></div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="summary">

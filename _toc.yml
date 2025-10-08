@@ -2,20 +2,20 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: Week_01
 chapters:
 - file: Week_01
 - file: Week_02
-- file: week_03
-- file: week_04
-- file: week_05
-- file: week_06
-- file: week_07
-- file: week_08
-- file: week_09
-- file: week_10
-- file: week_11
-- file: week_12
-- file: week_13
+- file: Week_03
+- file: Week_04
+- file: Week_05
+- file: Week_06
+- file: Week_07
+- file: Week_08
+- file: Week_09
+- file: Week_10
+- file: Week_11
+- file: Week_12
+- file: Week_13
 - file: nltk_install
 - file: spacy_install

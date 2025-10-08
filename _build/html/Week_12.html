@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -182,6 +182,8 @@
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nltk_install.html">Installing NLTK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spacy_install.html">Installing spaCy</a></li>
 </ul>
 
     </div>
@@ -429,9 +431,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gensim in /Users/yifangyuan/.local/lib/python3.11/site-packages (4.3.3)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&lt;2.0,&gt;=1.18.5 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from gensim) (1.26.4)
+Requirement already satisfied: numpy&lt;2.0,&gt;=1.18.5 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from gensim) (1.26.4)
 Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from gensim) (1.13.1)
 Requirement already satisfied: smart-open&gt;=1.8.1 in /opt/anaconda3/lib/python3.11/site-packages (from gensim) (5.2.1)
 </pre></div>
@@ -717,17 +717,12 @@ memory usage: 646.3+ KB
 <span class="nn">--&gt; 144     token for sent in sentences for token</span> in <span class="ni">_treebank_word_tokenizer.tokenize</span><span class="nt">(sent)</span>
 <span class="g g-Whitespace">    </span><span class="mi">145</span> <span class="p">]</span>
 
-<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/destructive.py:158,</span> in <span class="ni">NLTKWordTokenizer.tokenize</span><span class="nt">(self, text, convert_parentheses, return_str)</span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span>         <span class="s2">&quot;Parameter &#39;return_str&#39; has been deprecated and should no &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">152</span>         <span class="s2">&quot;longer be used.&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">153</span>         <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">154</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">155</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">157</span> <span class="k">for</span> <span class="n">regexp</span><span class="p">,</span> <span class="n">substitution</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">STARTING_QUOTES</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">158</span>     <span class="n">text</span> <span class="o">=</span> <span class="n">regexp</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">substitution</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">160</span> <span class="k">for</span> <span class="n">regexp</span><span class="p">,</span> <span class="n">substitution</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">PUNCTUATION</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">161</span>     <span class="n">text</span> <span class="o">=</span> <span class="n">regexp</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">substitution</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/destructive.py:182,</span> in <span class="ni">NLTKWordTokenizer.tokenize</span><span class="nt">(self, text, convert_parentheses, return_str)</span>
+<span class="g g-Whitespace">    </span><span class="mi">179</span>     <span class="n">text</span> <span class="o">=</span> <span class="n">regexp</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">substitution</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">181</span> <span class="k">for</span> <span class="n">regexp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONTRACTIONS2</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">182</span>     <span class="n">text</span> <span class="o">=</span> <span class="n">regexp</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot; \1 \2 &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">183</span> <span class="k">for</span> <span class="n">regexp</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">CONTRACTIONS3</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">184</span>     <span class="n">text</span> <span class="o">=</span> <span class="n">regexp</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot; \1 \2 &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
