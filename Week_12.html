@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ling 380 - Week 12 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Week_12';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ling 380 - Week 13" href="Week_13.html" />
+    <link rel="prev" title="Ling 380 - Week 11" href="Week_11.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_03.html">Ling 380 - Week 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_04.html">Ling 380 - Week 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_05.html">Ling 380 - Week 5</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Week_06.html">Ling 380 - Week 6</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_07.html">Ling 380 - Week 7</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_08.html">Ling 380 - Week 8</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_09.html">Ling 380 - Week 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_10.html">Ling 380 - Week 10</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_11.html">Ling 380 - Week 11</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ling 380 - Week 12</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_13.html">Ling 380 - Week 13</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="nltk_install.html">Installing NLTK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spacy_install.html">Installing spaCy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FWeek_12.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Week_12.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ling 380 - Week 12</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 12</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-modelling">Topic modelling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-gensim-and-import-statements">Install gensim and import statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-and-examine-the-data">Import and examine the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-function-to-process-the-article-text-column">Define a function to process the article_text column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-for-gensim">Parameters for gensim</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ling-380-week-12">
+<h1>Ling 380 - Week 12<a class="headerlink" href="#ling-380-week-12" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="topic-modelling">
+<h1>Topic modelling<a class="headerlink" href="#topic-modelling" title="Link to this heading">#</a></h1>
+<p>Topic modelling is a very useful technique to get information from a large dataset. It is a type of <em>unsupervised machine learning</em>. Recall that <em>supervised machine learning</em> involved learning patterns from data, given a dataset and labels (e.g., movie reviews and stars). In unsupervised machine learning, we find patterns, but we do not have labels associated with the data. The task is to learn to classify or cluster the data by exploiting the patterns or similarities in the documents.</p>
+<p>The basic idea behind topic modelling is that you can identify topics or themes in a collection of documents using words that co-occur. One of the implementations of this idea is LDA (Latent Dirichlet Allocation), which assumes a distribution that we try to find using words in the text. The figure below is from an easy to follow paper outlining LDA.</p>
+<figure>
+    <img src="./img/Blei_topic_modelling.png" style="width:450px;"
+         alt="supervised classification">
+</figure>
+<p>Diagram from: Blei, D. M. (2012). <a class="reference external" href="https://www.cs.columbia.edu/~blei/papers/Blei2012.pdf">Probabilistic topic models</a>. Communications of the ACM, 55(4), 77-84.</p>
+<p>The data for topic modelling needs to be normalized following the usual steps we have done so far: tokenization, lemmatization, and stopword removal. Then, we use a topic modelling module to find the topics in the data.</p>
+<p>The implementation here is based on a project on extracting topics from news articles, <a class="reference external" href="https://github.com/sfu-discourse-lab/TACT/tree/master">TACT</a>.</p>
+<p>If you want to see topic models in action, go to the <a class="reference external" href="https://gendergaptracker.research.sfu.ca/apps/topicmodel">research site</a> for the Gender Gap Tracker and check topics for any month in the last 8 years. Those are the main topics covered in Canadian news.</p>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
+<p>We will work with a collection of news articles, a part of the <a class="reference external" href="https://github.com/sfu-discourse-lab/SOCC">SFU Opinion and Comments Corpus (SOCC)</a>. The corpus was collected in our lab, the Discourse Processing Lab, for a project on evaluative language in online news comments. It consists of: opinion articles, comments, and annotated comments from the Canadian newspaper <em>The Globe and Mail</em>. We’ll work with the articles, which should be in the data directory. If not, you can always download the corpus directly from the page above or from its <a class="reference external" href="https://www.kaggle.com/datasets/mtaboada/sfu-opinion-and-comments-corpus-socc">Kaggle page</a> and save the <code class="docutils literal notranslate"><span class="pre">gnm_articles.csv</span></code> file to your data directory.</p>
+</section>
+<section id="install-gensim-and-import-statements">
+<h2>Install gensim and import statements<a class="headerlink" href="#install-gensim-and-import-statements" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># run only once</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>gensim<span class="w"> </span>--user
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gensim in /Users/yifangyuan/.local/lib/python3.11/site-packages (4.3.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&lt;2.0,&gt;=1.18.5 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from gensim) (1.26.4)
+Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in /Users/yifangyuan/.local/lib/python3.11/site-packages (from gensim) (1.13.1)
+Requirement already satisfied: smart-open&gt;=1.8.1 in /opt/anaconda3/lib/python3.11/site-packages (from gensim) (5.2.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.stem</span><span class="w"> </span><span class="kn">import</span> <span class="n">WordNetLemmatizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gensim</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim</span><span class="w"> </span><span class="kn">import</span> <span class="n">corpora</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">LdaModel</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-and-examine-the-data">
+<h2>Import and examine the data<a class="headerlink" href="#import-and-examine-the-data" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./data/gnm_articles.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 10339 entries, 0 to 10338
+Data columns (total 8 columns):
+ #   Column               Non-Null Count  Dtype  
+---  ------               --------------  -----  
+ 0   article_id           10339 non-null  int64  
+ 1   title                10339 non-null  object 
+ 2   article_url          10339 non-null  object 
+ 3   author               10339 non-null  object 
+ 4   published_date       10339 non-null  object 
+ 5   ncomments            10339 non-null  float64
+ 6   ntop_level_comments  10339 non-null  float64
+ 7   article_text         10339 non-null  object 
+dtypes: float64(2), int64(1), object(5)
+memory usage: 646.3+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>article_id</th>
+      <th>title</th>
+      <th>article_url</th>
+      <th>author</th>
+      <th>published_date</th>
+      <th>ncomments</th>
+      <th>ntop_level_comments</th>
+      <th>article_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>26842506</td>
+      <td>The Tories deserve another mandate - Stephen H...</td>
+      <td>http://www.theglobeandmail.com/opinion/editori...</td>
+      <td>GLOBE EDITORIAL</td>
+      <td>2015-10-16 EDT</td>
+      <td>2187.0</td>
+      <td>1378.0</td>
+      <td>&lt;p&gt;All elections are choices among imperfect a...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>26055892</td>
+      <td>Harper hysteria a sign of closed liberal minds</td>
+      <td>http://www.theglobeandmail.com/opinion/harper-...</td>
+      <td>Konrad Yakabuski</td>
+      <td>2015-08-24 EDT</td>
+      <td>1103.0</td>
+      <td>455.0</td>
+      <td>&lt;p&gt;If even a fraction of the darkness that his...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6929035</td>
+      <td>Too many first nations people live in a dream ...</td>
+      <td>http://www.theglobeandmail.com/opinion/too-man...</td>
+      <td>Jeffrey Simpson</td>
+      <td>2013-01-05 EST</td>
+      <td>1164.0</td>
+      <td>433.0</td>
+      <td>&lt;p&gt;Large elements of aboriginal Canada live in...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>19047636</td>
+      <td>The Globe's editorial board endorses Tim Hudak...</td>
+      <td>http://www.theglobeandmail.com/opinion/editori...</td>
+      <td>GLOBE EDITORIAL</td>
+      <td>2014-06-06 EDT</td>
+      <td>905.0</td>
+      <td>432.0</td>
+      <td>&lt;p&gt;Over four days, The Globe editorial board l...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>11672346</td>
+      <td>Disgruntled Arab states look to strip Canada o...</td>
+      <td>http://www.theglobeandmail.com/news/world/disg...</td>
+      <td>Campbell Clark</td>
+      <td>2013-05-02 EDT</td>
+      <td>1129.0</td>
+      <td>411.0</td>
+      <td>&lt;p&gt;Growing discontent among Arab nations over ...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="define-a-function-to-process-the-article-text-column">
+<h2>Define a function to process the article_text column<a class="headerlink" href="#define-a-function-to-process-the-article-text-column" title="Link to this heading">#</a></h2>
+<p>The only information we are interested in is in the <code class="docutils literal notranslate"><span class="pre">article_text</span></code> column, which contains the body of the articles. We will reuse and modify the function from last week to clean up that data. We will:</p>
+<ul class="simple">
+<li><p>Remove the html tokens (the text has <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;/p&gt;</span></code> to mark paragraphs)</p></li>
+<li><p>Tokenize and lowercase</p></li>
+<li><p>Remove stopwords</p></li>
+<li><p>Lemmatize – this one is added from last week; we use the WordNet lemmatizer</p></li>
+</ul>
+<p>We apply this function to the original df, to create a new column, <code class="docutils literal notranslate"><span class="pre">article_processed</span></code>. Then, we create a dictionary from that blob of text. You can also first extract the <code class="docutils literal notranslate"><span class="pre">article_text</span></code> to a string and process it, then create the dictionary (like we did in Week 12).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a function that: 1. tokenizes, 2. lowercases and</span>
+<span class="c1"># 3. lemmatizes</span>
+
+<span class="c1"># create the lemmatizer first</span>
+<span class="n">lemmatizer</span> <span class="o">=</span> <span class="n">WordNetLemmatizer</span><span class="p">()</span>
+
+<span class="c1"># define the function</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">process_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">clean_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&lt;.*?&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">clean_text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="n">cleaned_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+    <span class="n">lemmatized_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">lemmatizer</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">cleaned_words</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">lemmatized_words</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;article_processed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;article_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">process_text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;article_processed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;article_text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">process_text</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/pandas/core/series.py:4764,</span> in <span class="ni">Series.apply</span><span class="nt">(self, func, convert_dtype, args, by_row, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4629</span> <span class="k">def</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4630</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4631</span>     <span class="n">func</span><span class="p">:</span> <span class="n">AggFuncType</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4636</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4637</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span> <span class="o">|</span> <span class="n">Series</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4638</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">4639</span><span class="sd">     Invoke function on values of Series.</span>
+<span class="g g-Whitespace">   </span><span class="mi">4640</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4755</span><span class="sd">     dtype: float64</span>
+<span class="g g-Whitespace">   </span><span class="mi">4756</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">4757</span>     <span class="k">return</span> <span class="n">SeriesApply</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">4758</span>         <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4759</span>         <span class="n">func</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4760</span>         <span class="n">convert_dtype</span><span class="o">=</span><span class="n">convert_dtype</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4761</span>         <span class="n">by_row</span><span class="o">=</span><span class="n">by_row</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4762</span>         <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">4763</span>         <span class="n">kwargs</span><span class="o">=</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">4764</span>     <span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/pandas/core/apply.py:1209,</span> in <span class="ni">SeriesApply.apply</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1206</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_compat</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1208</span> <span class="c1"># self.func is Callable</span>
+<span class="ne">-&gt; </span><span class="mi">1209</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_standard</span><span class="p">()</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/pandas/core/apply.py:1289,</span> in <span class="ni">SeriesApply.apply_standard</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1283</span> <span class="c1"># row-wise access</span>
+<span class="g g-Whitespace">   </span><span class="mi">1284</span> <span class="c1"># apply doesn&#39;t have a `na_action` keyword and for backward compat reasons</span>
+<span class="g g-Whitespace">   </span><span class="mi">1285</span> <span class="c1"># we need to give `na_action=&quot;ignore&quot;` for categorical data.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1286</span> <span class="c1"># TODO: remove the `na_action=&quot;ignore&quot;` when that default has been changed in</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="c1">#  Categorical (GH51645).</span>
+<span class="g g-Whitespace">   </span><span class="mi">1288</span> <span class="n">action</span> <span class="o">=</span> <span class="s2">&quot;ignore&quot;</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">CategoricalDtype</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1289</span> <span class="n">mapped</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="n">_map_values</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1290</span>     <span class="n">mapper</span><span class="o">=</span><span class="n">curried</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="n">action</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">convert_dtype</span>
+<span class="g g-Whitespace">   </span><span class="mi">1291</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1293</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">mapped</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">mapped</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ABCSeries</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1294</span>     <span class="c1"># GH#43986 Need to do list(mapped) in order to get treated as nested</span>
+<span class="g g-Whitespace">   </span><span class="mi">1295</span>     <span class="c1">#  See also GH#25959 regarding EA support</span>
+<span class="g g-Whitespace">   </span><span class="mi">1296</span>     <span class="k">return</span> <span class="n">obj</span><span class="o">.</span><span class="n">_constructor_expanddim</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">mapped</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">obj</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/pandas/core/base.py:921,</span> in <span class="ni">IndexOpsMixin._map_values</span><span class="nt">(self, mapper, na_action, convert)</span>
+<span class="g g-Whitespace">    </span><span class="mi">918</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">ExtensionArray</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">919</span>     <span class="k">return</span> <span class="n">arr</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">mapper</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="n">na_action</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">921</span> <span class="k">return</span> <span class="n">algorithms</span><span class="o">.</span><span class="n">map_array</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="n">na_action</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="n">convert</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/pandas/core/algorithms.py:1814,</span> in <span class="ni">map_array</span><span class="nt">(arr, mapper, na_action, convert)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1812</span> <span class="n">values</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1813</span> <span class="k">if</span> <span class="n">na_action</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1814</span>     <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">map_infer</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="n">convert</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1815</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1816</span>     <span class="k">return</span> <span class="n">lib</span><span class="o">.</span><span class="n">map_infer_mask</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1817</span>         <span class="n">values</span><span class="p">,</span> <span class="n">mapper</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">isna</span><span class="p">(</span><span class="n">values</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">),</span> <span class="n">convert</span><span class="o">=</span><span class="n">convert</span>
+<span class="g g-Whitespace">   </span><span class="mi">1818</span>     <span class="p">)</span>
+
+<span class="nn">File lib.pyx:2926,</span> in <span class="ni">pandas._libs.lib.map_infer</span><span class="nt">()</span>
+
+<span class="nn">Cell In[6], line 10,</span> in <span class="ni">process_text</span><span class="nt">(text)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">def</span><span class="w"> </span><span class="nf">process_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">clean_text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&lt;.*?&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">clean_text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">cleaned_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span> <span class="ow">and</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">lemmatized_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">lemmatizer</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">cleaned_words</span><span class="p">]</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/__init__.py:142,</span> in <span class="ni">word_tokenize</span><span class="nt">(text, language, preserve_line)</span>
+<span class="g g-Whitespace">    </span><span class="mi">127</span> <span class="k">def</span><span class="w"> </span><span class="nf">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">language</span><span class="o">=</span><span class="s2">&quot;english&quot;</span><span class="p">,</span> <span class="n">preserve_line</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">129</span><span class="sd">     Return a tokenized copy of *text*,</span>
+<span class="g g-Whitespace">    </span><span class="mi">130</span><span class="sd">     using NLTK&#39;s recommended word tokenizer</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span><span class="sd">     :type preserve_line: bool</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">142</span>     <span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">text</span><span class="p">]</span> <span class="k">if</span> <span class="n">preserve_line</span> <span class="k">else</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span>     <span class="k">return</span> <span class="p">[</span>
+<span class="nn">    144         token for sent in sentences for token</span> in <span class="ni">_treebank_word_tokenizer.tokenize</span><span class="nt">(sent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span>     <span class="p">]</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/__init__.py:120,</span> in <span class="ni">sent_tokenize</span><span class="nt">(text, language)</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span><span class="sd"> Return a sentence-tokenized copy of *text*,</span>
+<span class="g g-Whitespace">    </span><span class="mi">112</span><span class="sd"> using NLTK&#39;s recommended sentence tokenizer</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">117</span><span class="sd"> :param language: the model name in the Punkt corpus</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span> <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">_get_punkt_tokenizer</span><span class="p">(</span><span class="n">language</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">120</span> <span class="k">return</span> <span class="n">tokenizer</span><span class="o">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:1280,</span> in <span class="ni">PunktSentenceTokenizer.tokenize</span><span class="nt">(self, text, realign_boundaries)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span> <span class="k">def</span><span class="w"> </span><span class="nf">tokenize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">realign_boundaries</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1277</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1278</span><span class="sd">     Given a text, returns a list of the sentences in that text.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1279</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1280</span>     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sentences_from_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">realign_boundaries</span><span class="p">))</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:1340,</span> in <span class="ni">PunktSentenceTokenizer.sentences_from_text</span><span class="nt">(self, text, realign_boundaries)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1331</span> <span class="k">def</span><span class="w"> </span><span class="nf">sentences_from_text</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1332</span>     <span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">realign_boundaries</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">1333</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1334</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1335</span><span class="sd">     Given a text, generates the sentences in that text by only</span>
+<span class="g g-Whitespace">   </span><span class="mi">1336</span><span class="sd">     testing candidate sentence breaks. If realign_boundaries is</span>
+<span class="g g-Whitespace">   </span><span class="mi">1337</span><span class="sd">     True, includes in the sentence closing punctuation that</span>
+<span class="g g-Whitespace">   </span><span class="mi">1338</span><span class="sd">     follows the period.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1339</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1340</span>     <span class="k">return</span> <span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">s</span><span class="p">:</span><span class="n">e</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">span_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">realign_boundaries</span><span class="p">)]</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:1340,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1331</span> <span class="k">def</span><span class="w"> </span><span class="nf">sentences_from_text</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1332</span>     <span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">realign_boundaries</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="g g-Whitespace">   </span><span class="mi">1333</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1334</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1335</span><span class="sd">     Given a text, generates the sentences in that text by only</span>
+<span class="g g-Whitespace">   </span><span class="mi">1336</span><span class="sd">     testing candidate sentence breaks. If realign_boundaries is</span>
+<span class="g g-Whitespace">   </span><span class="mi">1337</span><span class="sd">     True, includes in the sentence closing punctuation that</span>
+<span class="g g-Whitespace">   </span><span class="mi">1338</span><span class="sd">     follows the period.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1339</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1340</span>     <span class="k">return</span> <span class="p">[</span><span class="n">text</span><span class="p">[</span><span class="n">s</span><span class="p">:</span><span class="n">e</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">e</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">span_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">realign_boundaries</span><span class="p">)]</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:1328,</span> in <span class="ni">PunktSentenceTokenizer.span_tokenize</span><span class="nt">(self, text, realign_boundaries)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1326</span> <span class="k">if</span> <span class="n">realign_boundaries</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1327</span>     <span class="n">slices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_realign_boundaries</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">slices</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1328</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">slices</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1329</span>     <span class="k">yield</span> <span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">sentence</span><span class="o">.</span><span class="n">stop</span><span class="p">)</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:1457,</span> in <span class="ni">PunktSentenceTokenizer._realign_boundaries</span><span class="nt">(self, text, slices)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1444</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1445</span><span class="sd"> Attempts to realign punctuation that falls after the period but</span>
+<span class="g g-Whitespace">   </span><span class="mi">1446</span><span class="sd"> should otherwise be included in the same sentence.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1454</span><span class="sd">     [&quot;(Sent1.)&quot;, &quot;Sent2.&quot;].</span>
+<span class="g g-Whitespace">   </span><span class="mi">1455</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1456</span> <span class="n">realign</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">-&gt; </span><span class="mi">1457</span> <span class="k">for</span> <span class="n">sentence1</span><span class="p">,</span> <span class="n">sentence2</span> <span class="ow">in</span> <span class="n">_pair_iter</span><span class="p">(</span><span class="n">slices</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1458</span>     <span class="n">sentence1</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">sentence1</span><span class="o">.</span><span class="n">start</span> <span class="o">+</span> <span class="n">realign</span><span class="p">,</span> <span class="n">sentence1</span><span class="o">.</span><span class="n">stop</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1459</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">sentence2</span><span class="p">:</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:324,</span> in <span class="ni">_pair_iter</span><span class="nt">(iterator)</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">323</span>     <span class="k">return</span>
+<span class="ne">--&gt; </span><span class="mi">324</span> <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span>     <span class="k">yield</span> <span class="p">(</span><span class="n">prev</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">prev</span> <span class="o">=</span> <span class="n">el</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:1429,</span> in <span class="ni">PunktSentenceTokenizer._slices_from_text</span><span class="nt">(self, text)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1427</span> <span class="k">def</span><span class="w"> </span><span class="nf">_slices_from_text</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">slice</span><span class="p">]:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1428</span>     <span class="n">last_break</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ne">-&gt; </span><span class="mi">1429</span>     <span class="k">for</span> <span class="n">match</span><span class="p">,</span> <span class="n">context</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_match_potential_end_contexts</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1430</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_contains_sentbreak</span><span class="p">(</span><span class="n">context</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1431</span>             <span class="k">yield</span> <span class="nb">slice</span><span class="p">(</span><span class="n">last_break</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">end</span><span class="p">())</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/nltk/tokenize/punkt.py:1396,</span> in <span class="ni">PunktSentenceTokenizer._match_potential_end_contexts</span><span class="nt">(self, text)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1393</span> <span class="n">previous_match</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1394</span> <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lang_vars</span><span class="o">.</span><span class="n">period_context_re</span><span class="p">()</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1395</span>     <span class="c1"># Get the slice of the previous word</span>
+<span class="ne">-&gt; </span><span class="mi">1396</span>     <span class="n">before_text</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="n">previous_slice</span><span class="o">.</span><span class="n">stop</span> <span class="p">:</span> <span class="n">match</span><span class="o">.</span><span class="n">start</span><span class="p">()]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1397</span>     <span class="n">index_after_last_space</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_last_whitespace_index</span><span class="p">(</span><span class="n">before_text</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1398</span>     <span class="k">if</span> <span class="n">index_after_last_space</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1399</span>         <span class="c1"># + 1 to exclude the space itself</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="parameters-for-gensim">
+<h2>Parameters for gensim<a class="headerlink" href="#parameters-for-gensim" title="Link to this heading">#</a></h2>
+<p>Now that we have clean text, we will process it with gensim functions. The first one creates a dictionary of the words in the text. The second creates a corpus, a bag of words with the frequency of all the words. Finally, the LdaModel actually creates the topic model.</p>
+<p>There are several parameters you can set with LDA models. For instance, you may want to filter out words that have very few instances, because they are only representative of one or two articles. In this case, what we are setting as parameters are the number of topics and the number of iterations. We train the model with 10 topics, that is, we assume that there are 10 topics across the entire dataset. And we do 15 passes.</p>
+<p>Once we have extracted the topics, we can inspect the most representative X words in each topic. In this case, I set it to 20. One thing you could do is to try and label the topics. So, for instance, these are the two top topics when I run the model:</p>
+<ul class="simple">
+<li><p>Topic 0: party, liberal, conservative, election, government, harper, minister, political, would, leader, ndp, campaign, prime, new, one, vote, voter, trudeau, could, time</p></li>
+<li><p>Topic 1: per, cent, government, year, tax, canada, would, health, care, money, system, budget, cost, canadian, one, rate, spending, education, province, country</p></li>
+</ul>
+<p>I could rename them to:</p>
+<ul class="simple">
+<li><p>Topic 0 = Canadian politics</p></li>
+<li><p>Topic 1 = Budget and government spending</p></li>
+</ul>
+<p>The labels in the <a class="reference external" href="https://gendergaptracker.research.sfu.ca/apps/topicmodel">Gender Gap Tracker</a> site are done manually every month.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use the gensim function to create a dictionary of the words in the text</span>
+<span class="n">dictionary</span> <span class="o">=</span> <span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;article_processed&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># you can inspect the contents of that dictionary</span>
+<span class="k">for</span> <span class="n">token</span><span class="p">,</span> <span class="n">token_id</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">dictionary</span><span class="o">.</span><span class="n">token2id</span><span class="o">.</span><span class="n">items</span><span class="p">())[:</span><span class="mi">10</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> =&gt; </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">token_id</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use the doc2bow function to create a corpus, a bag of words (bow) of the text and the word counts</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;article_processed&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the LDA model</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print the top 20 words for each topic</span>
+<span class="n">topics</span> <span class="o">=</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">print_topics</span><span class="p">(</span><span class="n">num_words</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">topic_num</span><span class="p">,</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">topics</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Topic </span><span class="si">{</span><span class="n">topic_num</span><span class="si">}</span><span class="s2">: &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">topic</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; + &#39;</span><span class="p">)</span>
+    <span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&quot;</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">]</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word_list</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># you can also print the weight of each word in the topic</span>
+<span class="k">for</span> <span class="n">topic_num</span><span class="p">,</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">topics</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Topic </span><span class="si">{}</span><span class="s2">:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">topic_num</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">topic</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; + &#39;</span><span class="p">)</span>
+    <span class="n">word_weight_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> (</span><span class="si">{:.4f}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\&quot;</span><span class="s1">&#39;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">weight</span><span class="p">))</span> <span class="k">for</span> <span class="n">weight</span><span class="p">,</span> <span class="n">term</span> <span class="ow">in</span> <span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">)]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word_weight_list</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<p>We have learned about topic modelling and how to extract topics from data using the LDA model in the gensim library.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Week_11.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ling 380 - Week 11</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Week_13.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ling 380 - Week 13</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 12</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-modelling">Topic modelling</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-gensim-and-import-statements">Install gensim and import statements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-and-examine-the-data">Import and examine the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-a-function-to-process-the-article-text-column">Define a function to process the article_text column</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-for-gensim">Parameters for gensim</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

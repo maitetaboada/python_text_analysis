@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ling 380 - Week 4 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Week_04';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ling 380 - Week 5" href="Week_05.html" />
+    <link rel="prev" title="Ling 380 - Week 3" href="Week_03.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_03.html">Ling 380 - Week 3</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ling 380 - Week 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_05.html">Ling 380 - Week 5</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Week_06.html">Ling 380 - Week 6</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_07.html">Ling 380 - Week 7</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_08.html">Ling 380 - Week 8</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_09.html">Ling 380 - Week 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_10.html">Ling 380 - Week 10</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_11.html">Ling 380 - Week 11</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_12.html">Ling 380 - Week 12</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_13.html">Ling 380 - Week 13</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="nltk_install.html">Installing NLTK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spacy_install.html">Installing spaCy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FWeek_04.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Week_04.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ling 380 - Week 4</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-expressions-and-n-grams-functions">Regular expressions and n-grams. Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-function-reading-multiple-files-and-using-the-function-on-those-files">Defining a function, reading multiple files, and using the function on those files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-to-get-tokens-types-and-lexical-diversity">Function to get tokens, types, and lexical diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-to-read-and-process-all-the-files-in-a-directory">Function to read and process all the files in a directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-functions">Using the functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-output">Check the output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-expressions">Regular expressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-up-a-file">Clean up a file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ling-380-week-4">
+<h1>Ling 380 - Week 4<a class="headerlink" href="#ling-380-week-4" title="Link to this heading">#</a></h1>
+<section id="regular-expressions-and-n-grams-functions">
+<h2>Regular expressions and n-grams. Functions<a class="headerlink" href="#regular-expressions-and-n-grams-functions" title="Link to this heading">#</a></h2>
+<p><strong>Regular expressions</strong> are powerful methods to do the same thing over and over again. When you do a search and replace in something like Microsoft Word, you are using regular expressions.</p>
+<p>We’ll be using the python <code class="docutils literal notranslate"><span class="pre">re</span></code> module, for regular expressions. You can follow along on a <a class="reference external" href="https://realpython.com/regex-python/">python tutorial about the re module</a>.</p>
+<p>But, first, we’ll start with a review of <strong>functions</strong>.</p>
+<p>We’ll also learn <strong>how to structure notebooks</strong> (and code in general) a bit more neatly. We’ll start by importing all the modules we need, at the beginning of the notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk</span><span class="w"> </span><span class="kn">import</span> <span class="n">FreqDist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h3>
+<p>We have been using functions already but we never really went in depth on what they are. A function is really just a way to do some computation and receive a result from that computation. To do this the function needs an input that we provide to it. So the three parts of any function is input, computation, and output. Take for example the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function. We pass it a path to a file and it returns us an opened file. We don’t get to see the computation since it is hidden and we don’t ask for a print output.</p>
+<p>Python comes with many predefined functions. However, sometimes we need to create our own functions so that we can easily reuse code.</p>
+<p>To create a user-defined function we start by defining the function name and input what it takes using <code class="docutils literal notranslate"><span class="pre">def</span></code>. Then we put our code after the defining line.</p>
+<p>Note the colon and new line. The contents of the function are always indented below the colon.</p>
+<p>You can also optionally include a statement outlining what the function does. This is like a comment, except it has a slightly different format. Note the 3 quotation marks and that the text appears in a different colour. This is an instruction to python to store that information as special information. You can then retrieve that information with a <code class="docutils literal notranslate"><span class="pre">help(function_name)</span></code> statement.</p>
+<p>If we want our function to return some answer or result then we need to include a <code class="docutils literal notranslate"><span class="pre">return</span></code> commmand at the end of our function.</p>
+<p>In the next code block I will create a function for computing lexical diversity. To review how functions work here is a good tutorial: <a class="reference external" href="https://www.w3schools.com/python/python_functions.asp">https://www.w3schools.com/python/python_functions.asp</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># first we define our function and its input</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">lexDiv</span><span class="p">(</span><span class="n">types</span><span class="p">,</span> <span class="n">tokens</span><span class="p">):</span>
+    <span class="c1"># help or description for the function. Note the format</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates lexical diversity</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        2 integers or 2 variables: length of types and length of tokens</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A float, the lexical diversity</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#  we make a computation, avoiding division by 0</span>
+    <span class="n">diversity</span> <span class="o">=</span> <span class="n">types</span><span class="o">/</span><span class="n">tokens</span> <span class="k">if</span> <span class="n">tokens</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="c1"># lastly we return the result</span>
+    <span class="k">return</span> <span class="n">diversity</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># once defined, we can use, or &#39;call&#39; the function</span>
+<span class="c1"># here, we call it with 2 fixed numbers. Usually, you&#39;d give it 2 variables (types and tokens)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lexDiv</span><span class="p">(</span><span class="mi">4328</span><span class="p">,</span> <span class="mi">12094</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.35786340334049943
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the description or help on this function</span>
+<span class="n">help</span><span class="p">(</span><span class="n">lexDiv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function lexDiv in module __main__:
+
+lexDiv(types, tokens)
+    Calculates lexical diversity
+    
+    Args:
+        2 integers or 2 variables: length of types and length of tokens
+    
+    Returns:
+        A float, the lexical diversity
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function len in module builtins:
+
+len(obj, /)
+    Return the number of items in a container.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that this function, the way it’s defined, has 2 arguments: types and tokens. If you try to call the function with only 1 argument, or with 3, you’ll get an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lexDiv</span><span class="p">(</span><span class="mi">4328</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">lexDiv</span><span class="p">(</span><span class="mi">4328</span><span class="p">))</span>
+
+<span class="ne">TypeError</span>: lexDiv() missing 1 required positional argument: &#39;tokens&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lexDiv</span><span class="p">(</span><span class="mi">4328</span><span class="p">,</span> <span class="mi">12094</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="defining-a-function-reading-multiple-files-and-using-the-function-on-those-files">
+<h2>Defining a function, reading multiple files, and using the function on those files<a class="headerlink" href="#defining-a-function-reading-multiple-files-and-using-the-function-on-those-files" title="Link to this heading">#</a></h2>
+<p>We are now going to put together everything we’ve learned so far. We’ll define a function to use NLTK to calculate types and tokens, create another function to get and process all the files in a directory, and then call the function. This is a more efficient way of doing what we did for Week 3.</p>
+<section id="function-to-get-tokens-types-and-lexical-diversity">
+<h3>Function to get tokens, types, and lexical diversity<a class="headerlink" href="#function-to-get-tokens-types-and-lexical-diversity" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the function. We give it an easy to remember name</span>
+<span class="c1"># and the argument is a variable that contains a string, &#39;text&#39;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_text_info</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Uses NLTK to calculate: tokens, types, lexical diversity</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        text (str): a string containing the file or text</span>
+<span class="sd">        </span>
+<span class="sd">    Returns: </span>
+<span class="sd">        dict: a dictionary containing tokens, types, and lexical diversity</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># call the NLTK function to tokenize and store the results in &#39;tokens&#39;</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="c1"># get the length of the variable &#39;tokens&#39;</span>
+    <span class="n">n_tokens</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+    <span class="c1"># get the length of the types</span>
+    <span class="n">n_types</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">tokens</span><span class="p">))</span>
+    <span class="c1"># calculate the lexical diversity</span>
+    <span class="c1"># we can do it directly here, or call the function we created above</span>
+    <span class="n">lexical_diversity</span> <span class="o">=</span> <span class="n">n_types</span> <span class="o">/</span> <span class="n">n_tokens</span> <span class="k">if</span> <span class="n">n_tokens</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+   <span class="c1"># lexical_diversity = lexDiv(n_types, n_tokens)</span>
+    <span class="c1"># we also need to tell the function what information to return</span>
+    <span class="c1"># here, we create a dictionary to store it all</span>
+    <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;tokens&#39;</span><span class="p">:</span> <span class="n">n_tokens</span><span class="p">,</span>
+            <span class="s1">&#39;types&#39;</span><span class="p">:</span> <span class="n">n_types</span><span class="p">,</span>
+            <span class="s1">&#39;lexical_diversity&#39;</span><span class="p">:</span> <span class="n">lexical_diversity</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="function-to-read-and-process-all-the-files-in-a-directory">
+<h3>Function to read and process all the files in a directory<a class="headerlink" href="#function-to-read-and-process-all-the-files-in-a-directory" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the function</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">process_dir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reads all the files in a directory. Processes them using the &#39;get_text_info&#39; function</span>
+<span class="sd">    </span>
+<span class="sd">    Args: </span>
+<span class="sd">        path (str): path to the directory where the files are</span>
+<span class="sd">        </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: a dictionary with file names as keys and the tokens, types, lexical diversity, as values</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file_info</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># loop through all the files in the directory &quot;data&quot;</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+        <span class="c1"># check only for .txt files</span>
+        <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.txt&quot;</span><span class="p">):</span>    
+            <span class="c1"># get all the filenames with a .txt extension</span>
+            <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>      
+            <span class="c1"># open one file at a time, to read it, and with utf encoding</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+                <span class="c1"># store the contents of the file into the variable &quot;text&quot;</span>
+                <span class="n">text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="c1"># call the function on each file</span>
+                <span class="n">file_info</span><span class="p">[</span><span class="n">filename</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_text_info</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="c1"># return the info</span>
+    <span class="k">return</span> <span class="n">file_info</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="using-the-functions">
+<h2>Using the functions<a class="headerlink" href="#using-the-functions" title="Link to this heading">#</a></h2>
+<p>Now we call the <code class="docutils literal notranslate"><span class="pre">process_dir()</span></code> function, which calls the <code class="docutils literal notranslate"><span class="pre">get_text_info()</span></code> function. This is a cleaner, more modular way of writing code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the path. This directory should have more than 1 file</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;./data&#39;</span>
+
+<span class="n">files_in_dir_info</span> <span class="o">=</span> <span class="n">process_dir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="check-the-output">
+<h3>Check the output<a class="headerlink" href="#check-the-output" title="Link to this heading">#</a></h3>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to check the output. You can also modify this <code class="docutils literal notranslate"><span class="pre">for()</span></code> loop to save this information to a csv file. Note that, because <code class="docutils literal notranslate"><span class="pre">files_in_dir_info</span></code> is a dictionary, we need to go through its <code class="docutils literal notranslate"><span class="pre">items</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">file</span><span class="p">,</span> <span class="n">info</span> <span class="ow">in</span> <span class="n">files_in_dir_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File: </span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tokens: </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;tokens&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Types: </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;types&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Lexical diversity: </span><span class="si">{</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;lexical_diversity&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="regular-expressions">
+<h2>Regular expressions<a class="headerlink" href="#regular-expressions" title="Link to this heading">#</a></h2>
+<p>You often get data that needs a bit of extra cleaning. Regular expressions are a simple yet powerful way to do that.</p>
+<p>Note that we already imported the <code class="docutils literal notranslate"><span class="pre">re</span></code> module, above. Now we get to use one of its functions, <code class="docutils literal notranslate"><span class="pre">search()</span></code>. As with all functions that come from a module in python, you use it by typing the name of the module before the function: <code class="docutils literal notranslate"><span class="pre">re.search()</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">re.search()</span></code> takes two arguments:</p>
+<ol class="arabic simple">
+<li><p>the pattern you are searching for</p></li>
+<li><p>the place where you are searching for it (usually a string)</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">re.search('e',</span> <span class="pre">'beekeeper)</span></code> finds the first instance of the letter ‘e’ in the word ‘beekeeper’. Try it below.</p>
+<p>But, if you want to find not just the first, but all of the instances, then you use <code class="docutils literal notranslate"><span class="pre">re.findall()</span></code>. Try it below as well.</p>
+<p>Finally, you can use <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code> to replace text that matches a certain pattern. <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code> takes 3 arguments: the pattern, the thing to replace it with, and the string. Try it below to replace ‘the’ with ‘a’.</p>
+<p>There are a few useful conventions in regular expressions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[]</span></code> matches one of the things inside</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[Tt]</span></code> matches either upper or lower case ‘t’</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[-]</span></code> matches a range</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[0-9]</span></code> matches a single instance of all the numbers from 0 to 9</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[a-z]</span></code> matches all lowercase letters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[A-Z]</span></code> matches all uppercase letters</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[*]</span></code> matches 0 or more of the previous characters</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[o*h!]</span></code> matches: <code class="docutils literal notranslate"><span class="pre">h!,</span> <span class="pre">oh!,</span> <span class="pre">ooh!,</span> <span class="pre">oooh!,</span> <span class="pre">ooooh!</span></code>, etc</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[+]</span></code> matches 1 or more of the previous characters</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[o+h!]</span></code> matches: <code class="docutils literal notranslate"><span class="pre">oh!,</span> <span class="pre">ooh!,</span> <span class="pre">oooh!,</span> <span class="pre">ooooh!</span></code>, etc</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[.]</span></code> ignores the previous character</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[beg.n]</span></code> matches: <code class="docutils literal notranslate"><span class="pre">begin,</span> <span class="pre">began,</span> <span class="pre">begun</span></code>, but also <code class="docutils literal notranslate"><span class="pre">begon</span></code> and <code class="docutils literal notranslate"><span class="pre">beg3n</span></code>. This is useful to identify patterns such as <code class="docutils literal notranslate"><span class="pre">sh!t</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Special characters, such as <code class="docutils literal notranslate"><span class="pre">.</span></code>, <code class="docutils literal notranslate"><span class="pre">,</span></code>, or <code class="docutils literal notranslate"><span class="pre">\</span></code>, need to be preceded by a backslash, so that the regular expression knows that you mean literally the actual punctuation mark, not its use as a regular expression convention.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">[\.]</span></code> means “find the first instance of a period”</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[^]</span></code> matches the beginning of the line; <code class="docutils literal notranslate"><span class="pre">[$]</span></code> matches the end of the line</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;beekeeper&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;beekeeper&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;The sentence contains the word the spelled in upper and lower case.&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[Tt]he&#39;</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_sentence</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[Tt]he&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">sentence</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_sentence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="clean-up-a-file">
+<h3>Clean up a file<a class="headerlink" href="#clean-up-a-file" title="Link to this heading">#</a></h3>
+<p>The most useful aspect of regular expressions is that you can use them to get rid of stuff you don’t need in a file or series of files. Let’s say we just want to analyze the language of a script. Then, we want to remove all characters’ names and stage directions, as we are likely only interested in the dialogue.</p>
+<p>We are going to take the Ghostbusters file we downloaded a while back (or any other script from <a class="reference external" href="https://scifiscripts.com/">Scificripts</a>) and we’ll clean it up.</p>
+<p>First, we read it in into a variable and print it on the screen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filePath</span> <span class="o">=</span> <span class="s2">&quot;./data/Ghostbusters.txt&quot;</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filePath</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">ghostbusters</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">ghostbusters</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>You’ll see that most of the stuff we want to get rid of is in all caps on its own line:</p>
+<ul class="simple">
+<li><p>FADE IN</p></li>
+<li><p>EXT. NEW YORK PUBLIC LIBRARY – DAY</p></li>
+<li><p>LIBRARIAN</p></li>
+</ul>
+<p>We’ll write a regular expression using <code class="docutils literal notranslate"><span class="pre">re.sub()</span></code> to find all instances of entire lines that are only in upper case and replace them with nothing. Note that only uppercase lines also have spaces, periods and hyphens.</p>
+<ul class="simple">
+<li><p>The first argument is: <code class="docutils literal notranslate"><span class="pre">^[A-Z\s\.\,\-]+$\n?</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code> indicates the beginning of the line</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">A-Z</span></code> means any uppercase character</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\s</span></code> means space</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\.</span></code> means period</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\,</span></code> means comma</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\-</span></code> means hyphen</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> means 1 or more instances of an uppercase character</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span></code> means the end of the line</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">\n</span></code> means the end of line character</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">?</span></code> means that the <code class="docutils literal notranslate"><span class="pre">\n</span></code> is optional</p></li>
+</ul>
+</li>
+<li><p>The second argument is: <code class="docutils literal notranslate"><span class="pre">''</span></code></p>
+<ul>
+<li><p>This means ‘replace with nothing’, as there are no characters between the quotes</p></li>
+</ul>
+</li>
+<li><p>The third argument is the variable to operate on</p></li>
+<li><p>We also use the flag MULTILINE to make sure we match the entire line, not just a string within the line</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ghostbusters_clean</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^[A-Z\s\.\,\-]+$\n?&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ghostbusters</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">MULTILINE</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ghostbusters_clean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that there are still a couple of things that should be removed:</p>
+<ul class="simple">
+<li><p>lines that contain a character name plus parentheses: VENKMAN (V.O.)</p></li>
+<li><p>text in parentheses: (puzzled)</p></li>
+</ul>
+<p>You can write additional regular expressions to deal with those. For the first case, you can just probably modify the regular expression above to include parentheses.</p>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>In this notebook you have learned some concepts about writing and using functions:</p>
+<ul class="simple">
+<li><p>Structure and arguments for functions</p></li>
+<li><p>How to write the help part of functions</p></li>
+<li><p>How to use a function to read and process files in a directory</p></li>
+</ul>
+<p>You have also learned about regular expressions:</p>
+<ul class="simple">
+<li><p>Main functions in <code class="docutils literal notranslate"><span class="pre">re</span></code></p></li>
+<li><p>Some operators for regular expressions</p></li>
+<li><p>How to use regular expressions to clean up text</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Week_03.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ling 380 - Week 3</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Week_05.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Ling 380 - Week 5</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-expressions-and-n-grams-functions">Regular expressions and n-grams. Functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-a-function-reading-multiple-files-and-using-the-function-on-those-files">Defining a function, reading multiple files, and using the function on those files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-to-get-tokens-types-and-lexical-diversity">Function to get tokens, types, and lexical diversity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-to-read-and-process-all-the-files-in-a-directory">Function to read and process all the files in a directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-functions">Using the functions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-output">Check the output</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regular-expressions">Regular expressions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-up-a-file">Clean up a file</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

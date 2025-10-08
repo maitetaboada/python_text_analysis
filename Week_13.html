@@ -1,0 +1,712 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ling 380 - Week 13 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Week_13';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installing NLTK" href="nltk_install.html" />
+    <link rel="prev" title="Ling 380 - Week 12" href="Week_12.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Week_01.html">Ling380 - Week 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_02.html">Ling380 - Week 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_03.html">Ling 380 - Week 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_04.html">Ling 380 - Week 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Week_05.html">Ling 380 - Week 5</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Week_06.html">Ling 380 - Week 6</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_07.html">Ling 380 - Week 7</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_08.html">Ling 380 - Week 8</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_09.html">Ling 380 - Week 9</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_10.html">Ling 380 - Week 10</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_11.html">Ling 380 - Week 11</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Week_12.html">Ling 380 - Week 12</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ling 380 - Week 13</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="nltk_install.html">Installing NLTK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spacy_install.html">Installing spaCy</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FWeek_13.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Week_13.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ling 380 - Week 13</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 13</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chatbots">Chatbots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pattern-matching-chatbot">Pattern-matching chatbot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements-and-load-spacy">Import statements and load spaCy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-chatbot-matching">Create the chatbot matching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-more-rules">Add more rules</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ling-380-week-13">
+<h1>Ling 380 - Week 13<a class="headerlink" href="#ling-380-week-13" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="chatbots">
+<h1>Chatbots<a class="headerlink" href="#chatbots" title="Link to this heading">#</a></h1>
+<p>Chatbots are old technology. The most famous classic chatbot is <a class="reference external" href="https://en.wikipedia.org/wiki/ELIZA">ELIZA</a>, a system developed in the 1960s that answered questions based on templates. There are a few implementations of ELIZA out there, and you can test a version by <a class="reference external" href="https://web.njit.edu/~ronkowit/eliza.html">Kenneth Ronkowitz</a>.</p>
+<p>ELIZA was built to mimick a particular type of therapist: someone who asks you further questions about what you are saying. The answers where like this:</p>
+<ul class="simple">
+<li><p><font color="green">Human: Well, my boyfriend made me come here.</font></p></li>
+<li><p><font color="purple">Eliza: Your boyfriend made you come here</font></p></li>
+<li><p><font color="green">Human: He says I’m depressed much of the time.</font></p></li>
+<li><p><font color="purple">Eliza: I am sorry to hear you are depressed</font></p></li>
+<li><p><font color="green">Human: It’s true. I am unhappy.</font></p></li>
+<li><p><font color="purple">Eliza: Do you think coming here will help you not to be unhappy</font></p></li>
+<li><p><font color="green">Human: I need some help, that much seems certain</font></p></li>
+<li><p><font color="purple">Eliza: What would it mean to you if you got some help</font></p></li>
+</ul>
+<p>Text is from Weizenbaum, J. (1966). <a class="reference external" href="https://dl.acm.org/doi/10.1145/365153.365168">ELIZA—a computer program for the study of natural language communication between man and machine</a>. <em>Communications of the ACM</em>, 9(1), 36-45.</p>
+<p>You can see that you can create the answers by using pattern matching, introducing things like “I am sorry you are X”, when X is in a pre-defined list of negative mental states.</p>
+<p>Today, chatbots range from speech-to-speech systems like Siri, Alexa, Cortana and the like, to text-based chatbots that you may find on your bank’s website. Full conversational systems like Siri need to incorporate speech processing, language understanding, plus a way of getting answers to you (usually by searching the web). Customer service chatbots just need a language model to understand and generate language, plus a database that contains company information that the customer may need.</p>
+<p>You can also build a chatbot that <a class="reference external" href="https://www.youtube.com/watch?v=zZOzKQPSrDo">retrieves answers from a corpus</a>, or one based on generative AI, which <a class="reference external" href="https://www.youtube.com/watch?v=GB3dOuV6f4s">generates answers</a> by encoding your question.</p>
+<section id="pattern-matching-chatbot">
+<h2>Pattern-matching chatbot<a class="headerlink" href="#pattern-matching-chatbot" title="Link to this heading">#</a></h2>
+<p>You can build a simple chatbot by storing a series of potential questions and answers. That is, “if the user says X, then answer Y”. We are going to try that here. We will use spaCy’s <a class="reference external" href="https://spacy.io/usage/rule-based-matching">Matcher</a> module to do that.</p>
+<p>This particular implementation is based on <a class="reference external" href="https://heartbeat.comet.ml/chatbot-development-using-spacy-4f6515cb17b8">Ahilya’s</a>. It produces an extremely simple dialogue; just a greeting and only in response to “hello”. You can extend it with other patterns.</p>
+</section>
+<section id="import-statements-and-load-spacy">
+<h2>Import statements and load spaCy<a class="headerlink" href="#import-statements-and-load-spacy" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">spacy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">spacy.matcher</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matcher</span>
+
+<span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-the-chatbot-matching">
+<h2>Create the chatbot matching<a class="headerlink" href="#create-the-chatbot-matching" title="Link to this heading">#</a></h2>
+<p>The code has 2 parts:</p>
+<ul class="simple">
+<li><p>Create a few patterns, such as “Greeting” = “hello”</p></li>
+<li><p>Do a loop to get the input (parsing it with spaCy) and produce output</p></li>
+</ul>
+<p>At any point, when you are done, type ‘quit’ to leave the dialogue.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up the matcher to recognize specific patterns</span>
+<span class="n">matcher</span> <span class="o">=</span> <span class="n">Matcher</span><span class="p">(</span><span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">)</span>
+<span class="n">matcher</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Greeting&quot;</span><span class="p">,</span> <span class="p">[[{</span><span class="s2">&quot;LOWER&quot;</span><span class="p">:</span> <span class="s2">&quot;hello&quot;</span><span class="p">}]])</span>
+
+<span class="c1"># define the chatbot&#39;s interaction loop</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;You: &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;quit&quot;</span><span class="p">:</span> <span class="c1"># type &#39;quit&#39; to exit the prompt below</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">matches</span> <span class="o">=</span> <span class="n">matcher</span><span class="p">(</span><span class="n">nlp</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">matches</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: Hello there!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: I&#39;m sorry, can you please rephrase?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># define the chatbot&#39;s interaction loop</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;You: &quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;quit&quot;</span><span class="p">:</span> <span class="c1"># type &#39;quit&#39; to exit the prompt below</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="k">break</span>
+
+<span class="nn">File /opt/anaconda3/lib/python3.11/site-packages/ipykernel/kernelbase.py:1261,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1259</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1260</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1261</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1262</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1263</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1264</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1265</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1266</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1267</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="add-more-rules">
+<h2>Add more rules<a class="headerlink" href="#add-more-rules" title="Link to this heading">#</a></h2>
+<p>We are adding also “hi” to the list of Greetings, and giving a slightly different answer if “hi” is said, instead of “hello”. Then we add a new type of interaction, “Help_request”, where the system catches any instance of the word “help” in the prompt and answers. Finally, we add a default answer, where the bot doesn’t match anything, so that the user rephrases.</p>
+<p>Play around with this and add as many types of rules and as many matches as you want.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matcher</span> <span class="o">=</span> <span class="n">Matcher</span><span class="p">(</span><span class="n">nlp</span><span class="o">.</span><span class="n">vocab</span><span class="p">)</span>
+<span class="n">matcher</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Greeting&quot;</span><span class="p">,</span> <span class="p">[[{</span><span class="s2">&quot;LOWER&quot;</span><span class="p">:</span> <span class="s2">&quot;hello&quot;</span><span class="p">}],</span> <span class="p">[{</span><span class="s2">&quot;LOWER&quot;</span><span class="p">:</span> <span class="s2">&quot;hi&quot;</span><span class="p">}],</span> <span class="p">[{</span><span class="s2">&quot;LOWER&quot;</span><span class="p">:</span> <span class="s2">&quot;morning&quot;</span><span class="p">}]])</span>
+<span class="n">matcher</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;Help_request&quot;</span><span class="p">,</span> <span class="p">[[{</span><span class="s2">&quot;LOWER&quot;</span><span class="p">:</span> <span class="s2">&quot;help&quot;</span><span class="p">}]])</span> 
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;You: &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;quit&quot;</span><span class="p">:</span> 
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">matches</span> <span class="o">=</span> <span class="n">matcher</span><span class="p">(</span><span class="n">nlp</span><span class="p">(</span><span class="n">message</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">matches</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;hello&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: Hello there!&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="s2">&quot;hi&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: Hey! How&#39;s it going?&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="s2">&quot;morning&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: Good morning!&quot;</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="s2">&quot;help&quot;</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: What can I help you with?&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot: I&#39;m sorry, can you please rephrase?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You: hello
+Bot: Hello there!
+You: hello
+Bot: Hello there!
+You: hi
+Bot: Hey! How&#39;s it going?
+You: hello
+Bot: Hello there!
+You: quit
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h1>
+<p>We have learned about simple chatbots and started a pattern-matching chatbot. Check the Canvas page for more links to other types of chatbots.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Week_12.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ling 380 - Week 12</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="nltk_install.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installing NLTK</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ling 380 - Week 13</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#chatbots">Chatbots</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pattern-matching-chatbot">Pattern-matching chatbot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-statements-and-load-spacy">Import statements and load spaCy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-chatbot-matching">Create the chatbot matching</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-more-rules">Add more rules</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
