@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: Week_01
+root: intro
 chapters:
 - file: Week_01
 - file: Week_02
