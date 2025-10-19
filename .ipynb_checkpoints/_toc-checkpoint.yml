@@ -1,0 +1,45 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: How To
+  chapters:
+  - file: How-To-Interact-With-This-Book
+    title: Interact With This Book
+- caption: The Course
+  chapters:
+  - file: 02-Python/00-Python
+    title: Unit 0
+    sections:
+    - file: nltk_install
+    title: NLTK Installation
+    - file: spacy_install
+    title: SpaCy Installation
+  - file: Week_01
+    title: Unit 1
+  - file: Week_02
+    title: Unit 2
+  - file: Week_03
+    title: Unit 3
+  - file: Week_04
+    title: Unit 4
+  - file: Week_05
+    title: Unit 5
+  - file: Week_06
+    title: Unit 6
+  - file: Week_07
+    title: Unit 7 
+  - file: Week_08
+    title: Unit 8
+  - file: Week_09
+    title: Unit 9
+  - file: Week_10
+    title: Unit 10
+  - file: Week_11
+    title: Unit 11
+  - file: Week_12
+    title: Unit 12
+  - file: Week_13
+    title: Unit 13
