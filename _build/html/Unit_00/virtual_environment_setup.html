@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installing spaCy &#8212; My sample book</title>
+    <title>Course Environment Setup (LING-ENV) &#8212; My sample book</title>
   
   
   
@@ -57,9 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Unit_0/spacy_install';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Unit_00/virtual_environment_setup';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing NLTK" href="nltk_install.html" />
+    <link rel="prev" title="How to Interact With This Book" href="book_instructions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,12 +179,15 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">How To</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../How-To-Interact-With-This-Book.html">Interact With This Book</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python for text analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Unit_00.html">Unit 0 - Setting things up</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="book_instructions.html">How to interact with this book</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Virtual environment setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nltk_install.html">NLTK installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spacy_install.html">SpaCy installation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Book</span></p>
-<ul class="nav bd-sidenav">
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unit_01.html">Unit 1 - Notebooks and python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unit_02.html">Unit 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unit_03.html">Unit 3</a></li>
@@ -293,7 +296,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUnit_0/spacy_install.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUnit_00/virtual_environment_setup.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +326,7 @@
       
       
       
-      <li><a href="../_sources/Unit_0/spacy_install.ipynb" target="_blank"
+      <li><a href="../_sources/Unit_00/virtual_environment_setup.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installing spaCy</h1>
+    <h1>Course Environment Setup (LING-ENV)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -417,19 +420,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-ways-of-installing-spacy">Two ways of installing spaCy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">1. Jupyter notebook</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt">2. Command prompt</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibility-problems">Compatibility problems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-instructions-on-the-spacy-site">1. Follow instructions on the spaCy site</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downgrade-numpy">2. Downgrade numpy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-spacy-and-language-model">Installing spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-spacy-and-language-model">Loading spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-installation">Testing installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-string-to-doc-with-spacy">Converting string to doc with spaCy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accesing-the-information-in-the-doc-object">Accesing the information in the Doc object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-path">Conda path</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install">1) Install</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-activate-the-environment">2) Create and activate the environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-language-resources">3) Download language resources</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#register-the-jupyter-kernel">4) Register the Jupyter kernel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-jupyter">5) Launch Jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-kernel">6) Switch Kernel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-verification">5) Quick verification</a></li>
 </ul>
 </li>
 </ul>
@@ -443,164 +441,110 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installing-spacy">
-<h1>Installing spaCy<a class="headerlink" href="#installing-spacy" title="Link to this heading">#</a></h1>
-<p>SpaCy is a set of tools for Natural Language Processing. For more info: <a class="reference external" href="https://spacy.io/">spaCy</a>.</p>
-<p>This notebook will help you install it, but you can also go to the <a class="reference external" href="https://spacy.io/usage">installation instructions</a> for the best version for your system.</p>
-<section id="two-ways-of-installing-spacy">
-<h2>Two ways of installing spaCy<a class="headerlink" href="#two-ways-of-installing-spacy" title="Link to this heading">#</a></h2>
-<section id="jupyter-notebook">
-<h3>1. Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Link to this heading">#</a></h3>
-<p>You can install it from the notebook, by running the 2 lines below in your Jupyter notebook. Remember you only have to do this once.</p>
-</section>
-<section id="command-prompt">
-<h3>2. Command prompt<a class="headerlink" href="#command-prompt" title="Link to this heading">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="course-environment-setup-ling-env">
+<h1>Course Environment Setup (LING-ENV)<a class="headerlink" href="#course-environment-setup-ling-env" title="Link to this heading">#</a></h1>
+<p>You’ll create a consistent Python environment so every notebook runs the same on everyone’s machine.</p>
+<section id="conda-path">
+<h2>Conda path<a class="headerlink" href="#conda-path" title="Link to this heading">#</a></h2>
+<section id="install">
+<h3>1) Install<a class="headerlink" href="#install" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>In Windows, if you have Anaconda, you can open an Anaconda powershell prompt. If you don’t have Anaconda, just open a Windows powershell in admin mode.</p></li>
-<li><p>On a Mac, open a terminal window (spotlight and type “terminal”). Or look for “terminal” in your apps folder.</p></li>
-</ul>
-<p>Now that you have a command window open, simply go to the spaCy website and choose your operating system to copy and paste the right commands (one at a time). Click on the right options for you from here: <a class="reference external" href="https://spacy.io/usage">https://spacy.io/usage</a></p>
-</section>
-</section>
-<section id="compatibility-problems">
-<h2>Compatibility problems<a class="headerlink" href="#compatibility-problems" title="Link to this heading">#</a></h2>
-<p>If you get an error that says something about numpy, you can do two things, below.</p>
-<p>Possible error messages:</p>
-<ul class="simple">
-<li><p>numpy.ndarray …</p></li>
-<li><p>numpy.dtype …</p></li>
-</ul>
-<section id="follow-instructions-on-the-spacy-site">
-<h3>1. Follow instructions on the spaCy site<a class="headerlink" href="#follow-instructions-on-the-spacy-site" title="Link to this heading">#</a></h3>
-<p>Go to the heading “Using build constraints when compiling from source” in <a class="reference external" href="https://spacy.io/usage">https://spacy.io/usage</a>. In a command prompt/terminal, type the two lines (one at a time) that start with <code class="docutils literal notranslate"><span class="pre">PIP_CONSTRAINT</span></code>.</p>
-</section>
-<section id="downgrade-numpy">
-<h3>2. Downgrade numpy<a class="headerlink" href="#downgrade-numpy" title="Link to this heading">#</a></h3>
-<p>Type one of the two commands below, either in a notebook or in terminal/command prompt:</p>
-<ul class="simple">
-<li><p>In notebook: <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">numpy==1.26.4</span></code></p></li>
-<li><p>In command prompt: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy==1.26.4</span></code></p></li>
+<li><p><strong>Windows &amp; Mac:</strong> Install Anaconda.</p></li>
+<li><p>After installation, open a new Terminal/Command Prompt.
+If conda isn’t recognized, run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span> <span class="pre">zsh</span></code> (macOS) or <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span> <span class="pre">cmd.exe</span></code> (Windows), then reopen the terminal.</p></li>
 </ul>
 </section>
-<section id="installing-spacy-and-language-model">
-<h3>Installing spaCy and language model<a class="headerlink" href="#installing-spacy-and-language-model" title="Link to this heading">#</a></h3>
-<p>If running this notebook locally, you’ll only have to do the next two lines once.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>spacy
+<section id="create-and-activate-the-environment">
+<h3>2) Create and activate the environment<a class="headerlink" href="#create-and-activate-the-environment" title="Link to this heading">#</a></h3>
+<p><a class="reference internal" href="#../_static/virtual_environment.zip"><span class="xref myst">Download the virtual environment bundle</span></a></p>
+<p>Go to the virtual_environment folder (where environment.yml lives):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>path/to/your/virtual_environment_setup_directory<span class="w">  </span><span class="c1"># Revise the path</span>
+
+conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml<span class="w"> </span><span class="c1"># Create the environment</span>
+
+conda<span class="w"> </span>activate<span class="w"> </span>ling-env<span class="w"> </span><span class="c1"># Activate the environment</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>en_core_web_sm
-</pre></div>
-</div>
-</div>
 </div>
 </section>
-<section id="loading-spacy-and-language-model">
-<h3>Loading spaCy and language model<a class="headerlink" href="#loading-spacy-and-language-model" title="Link to this heading">#</a></h3>
-<p>Installation (if local) only needs to be done once. However, you need to import the spaCy module and load the language model every time you want to use it.</p>
-<p>Here, we are loading the small model for English derived from web data. There are other <a class="reference external" href="https://spacy.io/usage/models">models</a> for English and for other languages.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spacy</span>
+<section id="download-language-resources">
+<h3>3) Download language resources<a class="headerlink" href="#download-language-resources" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>en_core_web_sm
+
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import nltk; nltk.download(&#39;punkt&#39;); nltk.download(&#39;stopwords&#39;); nltk.download(&#39;wordnet&#39;)&quot;</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 </div>
 </section>
-<section id="testing-installation">
-<h3>Testing installation<a class="headerlink" href="#testing-installation" title="Link to this heading">#</a></h3>
-<p>We’ll define a sentence, process it with spaCy and check the output. This will test whether all the components are installed.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;This is a test sentence about Canada, but you can type whatever you want here.&quot;</span>
+<section id="register-the-jupyter-kernel">
+<h3>4) Register the Jupyter kernel<a class="headerlink" href="#register-the-jupyter-kernel" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="w"> </span>ling-env<span class="w"> </span>--display-name<span class="w"> </span><span class="s2">&quot;Python (LING-ENV)&quot;</span>
 </pre></div>
-</div>
-</div>
 </div>
 </section>
-<section id="converting-string-to-doc-with-spacy">
-<h3>Converting string to doc with spaCy<a class="headerlink" href="#converting-string-to-doc-with-spacy" title="Link to this heading">#</a></h3>
-<p>spaCy has a special type of object, a <code class="docutils literal notranslate"><span class="pre">Doc</span></code>. It’s the entire processing pipeline for any NLP system, in a single object. It takes a text, e.g., <code class="docutils literal notranslate"><span class="pre">sent1</span></code> and applies all the NLP steps to it (tokenization, tagging, named entity recognition). Once you have converted a string (a sentence) or a whole text to Doc, you can access everything that spaCy has done with it, i.e., the entire structure of language information that it has applied to it, with labels. spaCy refers to that language information and labels as ‘linguistic annotations’. spaCy does this with a simple function, <code class="docutils literal notranslate"><span class="pre">nlp()</span></code>.</p>
-<p><img alt="spaCy pipeline" src="https://spacy.io/images/pipeline.svg" /></p>
-<p>Image from <a class="reference external" href="https://spacy.io/usage/processing-pipelines">https://spacy.io/usage/processing-pipelines</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<section id="launch-jupyter">
+<h3>5) Launch Jupyter<a class="headerlink" href="#launch-jupyter" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start JupyterLab or classic Notebook:</span>
+jupyter<span class="w"> </span>lab
+<span class="c1"># or</span>
+jupyter<span class="w"> </span>notebook
 </pre></div>
-</div>
-</div>
 </div>
 </section>
-<section id="accesing-the-information-in-the-doc-object">
-<h3>Accesing the information in the Doc object<a class="headerlink" href="#accesing-the-information-in-the-doc-object" title="Link to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">doc</span></code> contains lots of <a class="reference external" href="https://spacy.io/api/doc">useful information</a>:</p>
-<ul class="simple">
-<li><p>tokens (words)</p></li>
-<li><p>lemmas</p></li>
-<li><p>morphology</p></li>
-<li><p>part of speech tags (pos tags)</p></li>
-<li><p>syntactic structure (a parse tree)</p></li>
-<li><p>named entities</p></li>
-</ul>
+<section id="switch-kernel">
+<h3>6) Switch Kernel<a class="headerlink" href="#switch-kernel" title="Link to this heading">#</a></h3>
+<p>In each notebook, choose Kernel → Change/Select Kernel → Python (LING-ENV).</p>
+<p><img alt="change_kernal" src="../_images/switch_kernel.png" /></p>
+</section>
+<section id="quick-verification">
+<h3>5) Quick verification<a class="headerlink" href="#quick-verification" title="Link to this heading">#</a></h3>
+<p>Run the following code when you are in LING-ENV.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print word tokens</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">importlib</span><span class="o">,</span> <span class="nn">spacy</span><span class="o">,</span> <span class="nn">nltk</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;CONDA_DEFAULT_ENV&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python:&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Env:&quot;</span><span class="p">,</span> <span class="n">env</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kernel:&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
-    
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;numpy&quot;</span><span class="p">,</span><span class="s2">&quot;pandas&quot;</span><span class="p">,</span><span class="s2">&quot;sklearn&quot;</span><span class="p">,</span><span class="s2">&quot;matplotlib&quot;</span><span class="p">,</span><span class="s2">&quot;seaborn&quot;</span><span class="p">,</span>
+             <span class="s2">&quot;nltk&quot;</span><span class="p">,</span><span class="s2">&quot;spacy&quot;</span><span class="p">,</span><span class="s2">&quot;wordcloud&quot;</span><span class="p">,</span><span class="s2">&quot;tqdm&quot;</span><span class="p">,</span><span class="s2">&quot;regex&quot;</span><span class="p">,</span><span class="s2">&quot;ipykernel&quot;</span><span class="p">,</span><span class="s2">&quot;jupyterlab&quot;</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">:</span><span class="s2">12s</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s2">&quot;__version__&quot;</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">))</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Missing or broken package &#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&#39;: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;spaCy model: en_core_web_sm ✅&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Missing spaCy model: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">pkg</span><span class="p">,</span> <span class="n">where</span> <span class="ow">in</span> <span class="p">[(</span><span class="s2">&quot;punkt&quot;</span><span class="p">,</span><span class="s2">&quot;tokenizers/punkt&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;stopwords&quot;</span><span class="p">,</span><span class="s2">&quot;corpora/stopwords&quot;</span><span class="p">)]:</span>
+    <span class="k">try</span><span class="p">:</span> <span class="n">nltk</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">where</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;NLTK data: </span><span class="si">{</span><span class="n">pkg</span><span class="si">}</span><span class="s2"> ✅&quot;</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">LookupError</span><span class="p">:</span> <span class="k">raise</span> <span class="ne">SystemExit</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Missing NLTK data &#39;</span><span class="si">{</span><span class="n">pkg</span><span class="si">}</span><span class="s2">&#39;. See setup instructions.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Environment check passed.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lemmas</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># morphology</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">morph</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># POS tags (more on this below)</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">pos_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># named entities</span>
-
-<span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">ent</span><span class="o">.</span><span class="n">label_</span><span class="p">)</span>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Python: 3.11.13
+Env: base
+Kernel: /opt/anaconda3/envs/ling-env/bin/python
+numpy        1.26.4
+pandas       2.3.3
+sklearn      1.7.2
+matplotlib   3.10.6
+seaborn      0.13.2
+nltk         3.9.2
+spacy        3.8.7
+wordcloud    1.9.4
+tqdm         4.67.1
+regex        2.5.162
+ipykernel    6.30.1
+jupyterlab   4.4.9
+spaCy model: en_core_web_sm ✅
+NLTK data: punkt ✅
+NLTK data: stopwords ✅
+✅ Environment check passed.
 </pre></div>
 </div>
 </div>
@@ -618,16 +562,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "ling-env"
         },
         kernelOptions: {
-            name: "python3",
-            path: "./Unit_0"
+            name: "ling-env",
+            path: "./Unit_00"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ling-env'</script>
 
                 </article>
               
@@ -639,6 +583,24 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="book_instructions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">How to Interact With This Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="nltk_install.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installing NLTK</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -655,19 +617,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-ways-of-installing-spacy">Two ways of installing spaCy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">1. Jupyter notebook</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt">2. Command prompt</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibility-problems">Compatibility problems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-instructions-on-the-spacy-site">1. Follow instructions on the spaCy site</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downgrade-numpy">2. Downgrade numpy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-spacy-and-language-model">Installing spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-spacy-and-language-model">Loading spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-installation">Testing installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-string-to-doc-with-spacy">Converting string to doc with spaCy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accesing-the-information-in-the-doc-object">Accesing the information in the Doc object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-path">Conda path</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install">1) Install</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-activate-the-environment">2) Create and activate the environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-language-resources">3) Download language resources</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#register-the-jupyter-kernel">4) Register the Jupyter kernel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-jupyter">5) Launch Jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switch-kernel">6) Switch Kernel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-verification">5) Quick verification</a></li>
 </ul>
 </li>
 </ul>

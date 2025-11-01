@@ -2,22 +2,19 @@ format: jb-book
 root: intro   
 
 parts:
-  - caption: How To
-    chapters:
-      - file: How-To-Interact-With-This-Book
-        title: Interact With This Book
-
-  - caption: The Book
+  - caption: Python for text analysis
     chapters:
       - file: Unit_00/Unit_00
         title: Unit 0 - Setting things up
         sections:
+          - file: Unit_00/book_instructions
+            title: How to interact with this book
           - file: Unit_00/virtual_environment_setup
-            title: Virtual Environment Setup
+            title: Virtual environment setup
           - file: Unit_00/nltk_install
-            title: NLTK Installation
+            title: NLTK installation
           - file: Unit_00/spacy_install
-            title: SpaCy Installation
+            title: SpaCy installation
 
       - file: Unit_01
         title: Unit 1 - Notebooks and python

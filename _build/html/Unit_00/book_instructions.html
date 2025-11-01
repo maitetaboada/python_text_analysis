@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installing spaCy &#8212; My sample book</title>
+    <title>How to Interact With This Book &#8212; My sample book</title>
   
   
   
@@ -57,9 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Unit_0/spacy_install';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Unit_00/book_instructions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Course Environment Setup (LING-ENV)" href="virtual_environment_setup.html" />
+    <link rel="prev" title="Unit 0" href="Unit_00.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -179,12 +179,15 @@
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">How To</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../How-To-Interact-With-This-Book.html">Interact With This Book</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python for text analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Unit_00.html">Unit 0 - Setting things up</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">How to interact with this book</a></li>
+<li class="toctree-l2"><a class="reference internal" href="virtual_environment_setup.html">Virtual environment setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nltk_install.html">NLTK installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spacy_install.html">SpaCy installation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">The Book</span></p>
-<ul class="nav bd-sidenav">
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unit_01.html">Unit 1 - Notebooks and python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unit_02.html">Unit 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Unit_03.html">Unit 3</a></li>
@@ -293,7 +296,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUnit_0/spacy_install.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUnit_00/book_instructions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -323,7 +326,7 @@
       
       
       
-      <li><a href="../_sources/Unit_0/spacy_install.ipynb" target="_blank"
+      <li><a href="../_sources/Unit_00/book_instructions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -407,7 +410,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installing spaCy</h1>
+    <h1>How to Interact With This Book</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -417,21 +420,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-ways-of-installing-spacy">Two ways of installing spaCy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">1. Jupyter notebook</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt">2. Command prompt</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibility-problems">Compatibility problems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-instructions-on-the-spacy-site">1. Follow instructions on the spaCy site</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downgrade-numpy">2. Downgrade numpy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-spacy-and-language-model">Installing spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-spacy-and-language-model">Loading spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-installation">Testing installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-string-to-doc-with-spacy">Converting string to doc with spaCy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accesing-the-information-in-the-doc-object">Accesing the information in the Doc object</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-jupyter-notebook-in-the-cloud"><i aria-hidden="true" class="fa fa-rocket"></i> Open Jupyter Notebook in the Cloud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-jupyter-notebook"><i aria-hidden="true" class="fa fa-download"></i> Download Jupyter Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-pdf"><i aria-hidden="true" class="fa fa-download"></i> Download PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-issue-on-github"><i aria-hidden="true" class="fab fa-github"></i> Open Issue on GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-to-show-output-code">Click to Show Output/Code</a></li>
 </ul>
             </nav>
         </div>
@@ -443,169 +437,79 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installing-spacy">
-<h1>Installing spaCy<a class="headerlink" href="#installing-spacy" title="Link to this heading">#</a></h1>
-<p>SpaCy is a set of tools for Natural Language Processing. For more info: <a class="reference external" href="https://spacy.io/">spaCy</a>.</p>
-<p>This notebook will help you install it, but you can also go to the <a class="reference external" href="https://spacy.io/usage">installation instructions</a> for the best version for your system.</p>
-<section id="two-ways-of-installing-spacy">
-<h2>Two ways of installing spaCy<a class="headerlink" href="#two-ways-of-installing-spacy" title="Link to this heading">#</a></h2>
-<section id="jupyter-notebook">
-<h3>1. Jupyter notebook<a class="headerlink" href="#jupyter-notebook" title="Link to this heading">#</a></h3>
-<p>You can install it from the notebook, by running the 2 lines below in your Jupyter notebook. Remember you only have to do this once.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-interact-with-this-book">
+<h1>How to Interact With This Book<a class="headerlink" href="#how-to-interact-with-this-book" title="Link to this heading">#</a></h1>
+<p>This book was created with <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a>, an open-source project for designing online interactive books that contain code and other computational material.</p>
+<p>Below the interactive features of this Jupyter Book are explained in further detail. Most interactive features can be found in the toolbar at the top of the page.</p>
+<section id="open-jupyter-notebook-in-the-cloud">
+<h2><i class="fa fa-rocket" aria-hidden="true"></i> Open Jupyter Notebook in the Cloud<a class="headerlink" href="#open-jupyter-notebook-in-the-cloud" title="Link to this heading">#</a></h2>
+<p>You can open most pages from this book in the cloud and run the code live. Hover over the rocket icon <i class="fa fa-rocket" aria-hidden="true"></i>  at the top of the page and click “Binder” to open a version of the same page in the cloud.</p>
+<p><a class="reference external" href="https://mybinder.org/">Binder</a> is a service that allows you to run Jupyter notebooks without any prior configuration or installation. It may take a few minutes for the Jupyter notebook to load, so be patient.</p>
 </section>
-<section id="command-prompt">
-<h3>2. Command prompt<a class="headerlink" href="#command-prompt" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>In Windows, if you have Anaconda, you can open an Anaconda powershell prompt. If you don’t have Anaconda, just open a Windows powershell in admin mode.</p></li>
-<li><p>On a Mac, open a terminal window (spotlight and type “terminal”). Or look for “terminal” in your apps folder.</p></li>
-</ul>
-<p>Now that you have a command window open, simply go to the spaCy website and choose your operating system to copy and paste the right commands (one at a time). Click on the right options for you from here: <a class="reference external" href="https://spacy.io/usage">https://spacy.io/usage</a></p>
+<section id="download-jupyter-notebook">
+<h2><i class="fa fa-download" aria-hidden="true"></i> Download Jupyter Notebook<a class="headerlink" href="#download-jupyter-notebook" title="Link to this heading">#</a></h2>
+<p>You can download any Jupyter notebook page from this book as a Jupyter notebook file (.ipynb). Hover over the download icon <i class="fa fa-download" aria-hidden="true"></i> and click “.ipynb”</p>
+<p>To work with this .ipynb file, you will need to have <a class="reference external" href="https://docs.jupyter.org/en/latest/index.html">Jupyter</a> installed and running on your own computer. I recommend installing it through the <a class="reference external" href="https://www.anaconda.com/download">Anaconda distribution</a>.</p>
 </section>
+<section id="download-pdf">
+<h2><i class="fa fa-download" aria-hidden="true"></i> Download PDF<a class="headerlink" href="#download-pdf" title="Link to this heading">#</a></h2>
+<p>You can download any Jupyter notebook page from this book as a PDF file. Hover over the download icon <i class="fa fa-download" aria-hidden="true"></i> and click “.pdf”</p>
 </section>
-<section id="compatibility-problems">
-<h2>Compatibility problems<a class="headerlink" href="#compatibility-problems" title="Link to this heading">#</a></h2>
-<p>If you get an error that says something about numpy, you can do two things, below.</p>
-<p>Possible error messages:</p>
-<ul class="simple">
-<li><p>numpy.ndarray …</p></li>
-<li><p>numpy.dtype …</p></li>
-</ul>
-<section id="follow-instructions-on-the-spacy-site">
-<h3>1. Follow instructions on the spaCy site<a class="headerlink" href="#follow-instructions-on-the-spacy-site" title="Link to this heading">#</a></h3>
-<p>Go to the heading “Using build constraints when compiling from source” in <a class="reference external" href="https://spacy.io/usage">https://spacy.io/usage</a>. In a command prompt/terminal, type the two lines (one at a time) that start with <code class="docutils literal notranslate"><span class="pre">PIP_CONSTRAINT</span></code>.</p>
+<section id="make-full-screen">
+<h2><i class="fas fa-expand" aria-hidden="true"></i> Make Full Screen<a class="headerlink" href="#make-full-screen" title="Link to this heading">#</a></h2>
+<p>To make any page from this book full screen, click the full screen <i class="fas fa-expand" aria-hidden="true"></i> icon at the top of the page.</p>
 </section>
-<section id="downgrade-numpy">
-<h3>2. Downgrade numpy<a class="headerlink" href="#downgrade-numpy" title="Link to this heading">#</a></h3>
-<p>Type one of the two commands below, either in a notebook or in terminal/command prompt:</p>
-<ul class="simple">
-<li><p>In notebook: <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">numpy==1.26.4</span></code></p></li>
-<li><p>In command prompt: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">numpy==1.26.4</span></code></p></li>
-</ul>
+<section id="open-issue-on-github">
+<h2><i class="fab fa-github" aria-hidden="true"></i> Open Issue on GitHub<a class="headerlink" href="#open-issue-on-github" title="Link to this heading">#</a></h2>
+<p>If you run into any issues or would like to make a suggestion, you can open an issue on GitHub by hovering over the GitHub icon <i class="fab fa-github" aria-hidden="true"></i> and clicking “open issue.”</p>
 </section>
-<section id="installing-spacy-and-language-model">
-<h3>Installing spaCy and language model<a class="headerlink" href="#installing-spacy-and-language-model" title="Link to this heading">#</a></h3>
-<p>If running this notebook locally, you’ll only have to do the next two lines once.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>spacy
+<section id="click-to-show-output-code">
+<h2>Click to Show Output/Code<a class="headerlink" href="#click-to-show-output-code" title="Link to this heading">#</a></h2>
+<p>Many of the pages in this book include hidden content. You can reveal the hidden content by clicking “Click to Show” beneath the cell on the right.</p>
+<p>Revealing content is meant to replicate the experience of running code live.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here&#39;s an example of hidden output! Click &#39;Click to Show&#39; to see the output!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>-m<span class="w"> </span>spacy<span class="w"> </span>download<span class="w"> </span>en_core_web_sm
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Here&#39;s an example of hidden output! Click &#39;Click to Show&#39; to see the output!
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</section>
-<section id="loading-spacy-and-language-model">
-<h3>Loading spaCy and language model<a class="headerlink" href="#loading-spacy-and-language-model" title="Link to this heading">#</a></h3>
-<p>Installation (if local) only needs to be done once. However, you need to import the spaCy module and load the language model every time you want to use it.</p>
-<p>Here, we are loading the small model for English derived from web data. There are other <a class="reference external" href="https://spacy.io/usage/models">models</a> for English and for other languages.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spacy</span>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span> <span class="o">*</span> <span class="mi">42</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nlp</span> <span class="o">=</span> <span class="n">spacy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;en_core_web_sm&quot;</span><span class="p">)</span>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1764
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</section>
-<section id="testing-installation">
-<h3>Testing installation<a class="headerlink" href="#testing-installation" title="Link to this heading">#</a></h3>
-<p>We’ll define a sentence, process it with spaCy and check the output. This will test whether all the components are installed.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot;This is a test sentence about Canada, but you can type whatever you want here.&quot;</span>
-</pre></div>
+<div class="tip admonition">
+<p class="admonition-title">Attribution</p>
+<p>This page is adapted from <strong>“How to Interact With This Book”</strong> by <a class="reference external" href="https://melaniewalsh.github.io/Intro-Cultural-Analytics/How-To-Interact-With-This-Book.html">Melanie Walsh</a>
+(accessed: 2025-10-19). Licensed under
+<a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+Edits in this version: rewording and course-specific examples.</p>
 </div>
-</div>
-</div>
-</section>
-<section id="converting-string-to-doc-with-spacy">
-<h3>Converting string to doc with spaCy<a class="headerlink" href="#converting-string-to-doc-with-spacy" title="Link to this heading">#</a></h3>
-<p>spaCy has a special type of object, a <code class="docutils literal notranslate"><span class="pre">Doc</span></code>. It’s the entire processing pipeline for any NLP system, in a single object. It takes a text, e.g., <code class="docutils literal notranslate"><span class="pre">sent1</span></code> and applies all the NLP steps to it (tokenization, tagging, named entity recognition). Once you have converted a string (a sentence) or a whole text to Doc, you can access everything that spaCy has done with it, i.e., the entire structure of language information that it has applied to it, with labels. spaCy refers to that language information and labels as ‘linguistic annotations’. spaCy does this with a simple function, <code class="docutils literal notranslate"><span class="pre">nlp()</span></code>.</p>
-<p><img alt="spaCy pipeline" src="https://spacy.io/images/pipeline.svg" /></p>
-<p>Image from <a class="reference external" href="https://spacy.io/usage/processing-pipelines">https://spacy.io/usage/processing-pipelines</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doc</span> <span class="o">=</span> <span class="n">nlp</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="accesing-the-information-in-the-doc-object">
-<h3>Accesing the information in the Doc object<a class="headerlink" href="#accesing-the-information-in-the-doc-object" title="Link to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">doc</span></code> contains lots of <a class="reference external" href="https://spacy.io/api/doc">useful information</a>:</p>
-<ul class="simple">
-<li><p>tokens (words)</p></li>
-<li><p>lemmas</p></li>
-<li><p>morphology</p></li>
-<li><p>part of speech tags (pos tags)</p></li>
-<li><p>syntactic structure (a parse tree)</p></li>
-<li><p>named entities</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print word tokens</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
-    
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lemmas</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">lemma_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># morphology</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">morph</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># POS tags (more on this below)</span>
-
-<span class="k">for</span> <span class="n">token</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">token</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">token</span><span class="o">.</span><span class="n">pos_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># named entities</span>
-
-<span class="k">for</span> <span class="n">ent</span> <span class="ow">in</span> <span class="n">doc</span><span class="o">.</span><span class="n">ents</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ent</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">ent</span><span class="o">.</span><span class="n">label_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 </section>
 </section>
 
@@ -622,7 +526,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Unit_0"
+            path: "./Unit_00"
         },
         predefinedOutput: true
     }
@@ -639,6 +543,24 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Unit_00.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Unit 0</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="virtual_environment_setup.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Course Environment Setup (LING-ENV)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -655,21 +577,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-ways-of-installing-spacy">Two ways of installing spaCy</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook">1. Jupyter notebook</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-prompt">2. Command prompt</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compatibility-problems">Compatibility problems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#follow-instructions-on-the-spacy-site">1. Follow instructions on the spaCy site</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downgrade-numpy">2. Downgrade numpy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-spacy-and-language-model">Installing spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-spacy-and-language-model">Loading spaCy and language model</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-installation">Testing installation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-string-to-doc-with-spacy">Converting string to doc with spaCy</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#accesing-the-information-in-the-doc-object">Accesing the information in the Doc object</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-jupyter-notebook-in-the-cloud"><i aria-hidden="true" class="fa fa-rocket"></i> Open Jupyter Notebook in the Cloud</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-jupyter-notebook"><i aria-hidden="true" class="fa fa-download"></i> Download Jupyter Notebook</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-pdf"><i aria-hidden="true" class="fa fa-download"></i> Download PDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-full-screen"><i aria-hidden="true" class="fas fa-expand"></i> Make Full Screen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-issue-on-github"><i aria-hidden="true" class="fab fa-github"></i> Open Issue on GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#click-to-show-output-code">Click to Show Output/Code</a></li>
 </ul>
   </nav></div>
 
