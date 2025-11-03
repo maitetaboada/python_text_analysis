@@ -18,7 +18,7 @@ parts:
       - file: Unit_01
         title: Unit 1 - Notebooks and python
       - file: Unit_02
-        title: Unit 2
+        title: Unit 2 - Text as data
       - file: Unit_03
         title: Unit 3
       - file: Unit_04
