@@ -1,5 +1,5 @@
 format: jb-book
-root: intro   
+root: intro
 
 parts:
   - caption: Python for text analysis
