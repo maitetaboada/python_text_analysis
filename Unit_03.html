@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Unit 3 &#8212; My sample book</title>
+    <title>Unit 3 - Data cleaning and preprocessing &#8212; Python for text analysis</title>
   
   
   
@@ -60,8 +60,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Unit_03';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Unit 4" href="Unit_04.html" />
-    <link rel="prev" title="Unit 2" href="Unit_02.html" />
+    <link rel="next" title="Unit 4 - Regular expressions. Functions" href="Unit_04.html" />
+    <link rel="prev" title="Unit 2 - Text as data" href="Unit_02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,8 +153,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Python for text analysis - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Python for text analysis - Home"/>`);</script>
   
   
 </a></div>
@@ -175,7 +175,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Python Text Analysis
+                    Book & course
                 </a>
             </li>
         </ul>
@@ -189,7 +189,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit_01.html">Unit 1 - Notebooks and python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Unit_02.html">Unit 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Unit_02.html">Unit 2 - Text as data</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Unit 3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit_04.html">Unit 4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Unit_05.html">Unit 5</a></li>
@@ -271,6 +271,37 @@
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/maitetaboada/python_text_analysis/master?urlpath=tree/Unit_03.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -279,7 +310,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+      <li><a href="https://github.com/maitetaboada/python_text_analysis" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +327,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FUnit_03.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/maitetaboada/python_text_analysis/issues/new?title=Issue%20on%20page%20%2FUnit_03.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -410,7 +441,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unit 3</h1>
+    <h1>Unit 3 - Data cleaning and preprocessing</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -445,8 +476,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="unit-3">
-<h1>Unit 3 - Data cleaning and preprocessing<a class="headerlink" href="#unit-3" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unit-3-data-cleaning-and-preprocessing">
+<h1>Unit 3 - Data cleaning and preprocessing<a class="headerlink" href="#unit-3-data-cleaning-and-preprocessing" title="Link to this heading">#</a></h1>
 <section id="data-cleaning-and-preprocessing">
 <h2>Data cleaning and preprocessing<a class="headerlink" href="#data-cleaning-and-preprocessing" title="Link to this heading">#</a></h2>
 <p>Most data you’ll encounter contains extremely useful information and information that you don’t really need or that is actually noise. Cleaning and preprocessing allows you keep the useful information. It also puts the data in formats that will be easy to process by python and other programs.</p>
@@ -887,7 +918,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unit 2</p>
+        <p class="prev-next-title">Unit 2 - Text as data</p>
       </div>
     </a>
     <a class="right-next"
@@ -895,7 +926,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Unit 4</p>
+        <p class="prev-next-title">Unit 4 - Regular expressions. Functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -943,7 +974,7 @@ document.write(`
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Maite Taboada, https://www.sfu.ca/~mtaboada
 </p>
 
   </div>
@@ -953,7 +984,7 @@ By The Jupyter Book Community
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2025.
       <br/>
     
   </p>
