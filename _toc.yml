@@ -2,7 +2,7 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: Python for text analysis
+  - caption: Units
     chapters:
       - file: Unit_00/Unit_00
         title: Unit 0 - Setting things up
@@ -41,3 +41,9 @@ parts:
         title: Unit 12
       - file: Unit_13
         title: Unit 13
+  - caption: Data
+    chapters:
+      - file: data
+        title: Data used in this book
+  
+        
