@@ -20,27 +20,27 @@ parts:
       - file: Unit_02
         title: Unit 2 - Text as data
       - file: Unit_03
-        title: Unit 3
+        title: Unit 3 - Data cleaning and preprocessing
       - file: Unit_04
-        title: Unit 4
+        title: Unit 4 - Regular expressions. Functions
       - file: Unit_05
-        title: Unit 5
+        title: Unit 5 - Pandas and data processing
       - file: Unit_06
-        title: Unit 6
+        title: Unit 6 - Normalizing data. Named entitiy recognition
       - file: Unit_07
-        title: Unit 7
+        title: Unit 7 - Basics of machine learning
       - file: Unit_08
-        title: Unit 8
+        title: Unit 8 - Generative AI
       - file: Unit_09
-        title: Unit 9
+        title: Unit 9 - Sentiment analysis
       - file: Unit_10
-        title: Unit 10
+        title: Unit 10 - Authorship attribution. Style analysis
       - file: Unit_11
-        title: Unit 11
+        title: Unit 11 - Processing survey answers
       - file: Unit_12
-        title: Unit 12
+        title: Unit 12 - Topic modelling
       - file: Unit_13
-        title: Unit 13
+        title: Unit 13 - Building chatbots
   - caption: Data
     chapters:
       - file: data
