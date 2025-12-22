@@ -10,11 +10,11 @@ project:
 #  github: https://github.com/maitetaboada/python_text_analysis
   binder: https://mybinder.org/v2/gh/maitetaboada/python_text_analysis/main
   
-  jupyter:
-    binder:
-      url: https://mybinder.org
-      repo: maitetaboada/python_text_analysis
-      ref: main
+  # jupyter:
+    # binder:
+      # url: https://mybinder.org
+      # repo: maitetaboada/python_text_analysis
+      # ref: main
 
   toc:
     - file: intro.ipynb
