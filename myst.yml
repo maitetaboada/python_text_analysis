@@ -1,21 +1,11 @@
-# See docs at: https://mystmd.org/guide/frontmatter
 version: 1
+
 project:
-  id: b4761907-df24-451c-b19e-ff15655c85d5
-  title: Python for text analysis
-  description: An introduction to python for text analysis and NLP at Simon Fraser University
-  # keywords: []
-  authors: Maite Taboada
-  copyright: "2025"
-  github: https://github.com/maitetaboada/python_text_analysis
-  
- 
- 
- 
- 
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
- 
-    
+  title: Python Text Analysis
+  author: Maite Taboada
+  copyright: 2025
+  license: CC-BY-NC-SA-4.0
+
   toc:
     - file: intro.ipynb
     - title: Unit 0
@@ -38,15 +28,14 @@ project:
     - file: Unit_12.ipynb
     - file: Unit_13.ipynb
     - file: data.ipynb
-
-
+    - file: LICENSE.md
 
 
 site:
-  template: book-theme
   options:
-  #   favicon: favicon.ico
-    logo: ./img/logo.png
+    logo: img/logo.png
+    favicon: images/favicon.ico
     launch_buttons:
       binderhub_url: https://mybinder.org
-      notebook_interface: jupyterlab
+      thebelab: true
+
