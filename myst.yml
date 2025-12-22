@@ -50,3 +50,6 @@ site:
   options:
   #   favicon: favicon.ico
     logo: ./img/logo.png
+    launch_buttons:
+      binderhub_url: https://mybinder.org
+      notebook_interface: jupyterlab
