@@ -15,6 +15,8 @@ project:
       # url: https://mybinder.org
       # repo: maitetaboada/python_text_analysis
       # ref: main
+      
+
 
   toc:
     - file: intro.ipynb
@@ -45,5 +47,13 @@ site:
   template: book-theme
   options:
     logo: img/logo.png
+  actions:
+    - title: GitHub
+      url: https://github.com/maitetaboada/python_text_analysis
+    - title: Binder
+      url: https://mybinder.org/v2/gh/maitetaboada/python_text_analysis/main
+    # launch_buttons:
+      # binderhub_url: https://mybinder.org/v2/gh/maitetaboada/python_text_analysis/main
+      # thebelab: true
 #    favicon: images/favicon.ico
 
